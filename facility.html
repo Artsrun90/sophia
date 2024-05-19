@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="Ru-ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sophia</title>
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="css/bootstrap-icons.css" />
+  <link rel="stylesheet" href="css/jquery-ui.min.css" />
+  <link rel="stylesheet" href="css/custom.css" />
+  <link rel="stylesheet" href="css/facality.css" />
+</head>
+
+<body>
+  <div class="layout" id="js-layout">
+    <header class="header">
+      <div class="container-fluid">
+        <div class="header__wrap">
+          <div class="header__left">
+            <button type="button" class="btn btn-lg menu-btn" id="js-mob-menu-btn">
+              <i class="bi bi-list"></i>
+            </button>
+            <button type="button" class="btn btn-lg search-btn" id="js-mob-search-btn">
+              <i class="bi bi-search"></i>
+            </button>
+            <a href="/" class="logo">
+              <svg width="123" height="49" viewBox="0 0 123 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M66.0388 26.9563C66.0388 26.676 65.9954 26.4258 65.9087 26.2056C65.8286 25.9787 65.6785 25.7751 65.4583 25.595C65.2447 25.4081 64.9411 25.2279 64.5474 25.0544C64.1603 24.8743 63.6598 24.6874 63.0459 24.4939C62.3652 24.2804 61.7313 24.0401 61.144 23.7732C60.5568 23.5063 60.0396 23.196 59.5925 22.8423C59.1521 22.4886 58.8084 22.0815 58.5615 21.6211C58.3146 21.154 58.1912 20.6134 58.1912 19.9995C58.1912 19.3989 58.318 18.8517 58.5715 18.3579C58.8318 17.8641 59.1988 17.4403 59.6726 17.0867C60.1464 16.7263 60.7036 16.4494 61.3442 16.2559C61.9915 16.0623 62.7056 15.9656 63.4863 15.9656C64.5674 15.9656 65.5016 16.1624 66.2891 16.5562C67.0832 16.9499 67.6971 17.4837 68.1309 18.1577C68.5646 18.8317 68.7815 19.5891 68.7815 20.4299H66.0388C66.0388 19.9762 65.9421 19.5758 65.7485 19.2288C65.5617 18.8818 65.2747 18.6082 64.8877 18.408C64.5073 18.2078 64.0269 18.1077 63.4463 18.1077C62.8857 18.1077 62.4186 18.1911 62.0449 18.3579C61.6779 18.5247 61.401 18.7516 61.2141 19.0386C61.0339 19.3255 60.9438 19.6458 60.9438 19.9995C60.9438 20.2664 61.0072 20.5067 61.134 20.7202C61.2608 20.9271 61.451 21.1239 61.7046 21.3108C61.9582 21.491 62.2718 21.6611 62.6455 21.8213C63.0259 21.9748 63.4663 22.1283 63.9668 22.2817C64.7676 22.522 65.4683 22.7889 66.0688 23.0825C66.6761 23.3761 67.1799 23.7098 67.5803 24.0835C67.9874 24.4572 68.291 24.8776 68.4912 25.3447C68.6981 25.8118 68.8015 26.3424 68.8015 26.9363C68.8015 27.5636 68.6781 28.1241 68.4312 28.6179C68.1842 29.1117 67.8306 29.5321 67.3701 29.8792C66.9097 30.2262 66.3558 30.4897 65.7085 30.6699C65.0679 30.8501 64.3505 30.9402 63.5564 30.9402C62.849 30.9402 62.1484 30.8468 61.4543 30.6599C60.767 30.4664 60.1431 30.1794 59.5825 29.7991C59.022 29.412 58.5749 28.9249 58.2412 28.3376C57.9076 27.7437 57.7407 27.0497 57.7407 26.2556H60.5034C60.5034 26.7161 60.5768 27.1098 60.7236 27.4368C60.8771 27.7571 61.0907 28.0207 61.3643 28.2275C61.6445 28.4277 61.9715 28.5745 62.3452 28.668C62.7189 28.7614 63.1226 28.8081 63.5564 28.8081C64.1169 28.8081 64.5774 28.7314 64.9377 28.5779C65.3048 28.4177 65.5784 28.1975 65.7585 27.9172C65.9454 27.637 66.0388 27.3167 66.0388 26.9563ZM70.4579 25.4348V25.2246C70.4579 24.4305 70.5714 23.6998 70.7983 23.0325C71.0251 22.3585 71.3555 21.7746 71.7892 21.2808C72.223 20.7869 72.7535 20.4032 73.3808 20.1296C74.0081 19.8494 74.7221 19.7092 75.5229 19.7092C76.337 19.7092 77.0577 19.8494 77.685 20.1296C78.3189 20.4032 78.8528 20.7869 79.2865 21.2808C79.7203 21.7746 80.0506 22.3585 80.2775 23.0325C80.5044 23.6998 80.6178 24.4305 80.6178 25.2246V25.4348C80.6178 26.2222 80.5044 26.953 80.2775 27.627C80.0506 28.2943 79.7203 28.8782 79.2865 29.3787C78.8528 29.8725 78.3223 30.2562 77.695 30.5298C77.0677 30.8034 76.3503 30.9402 75.5429 30.9402C74.7421 30.9402 74.0247 30.8034 73.3908 30.5298C72.7568 30.2562 72.223 29.8725 71.7892 29.3787C71.3555 28.8782 71.0251 28.2943 70.7983 27.627C70.5714 26.953 70.4579 26.2222 70.4579 25.4348ZM73.1005 25.2246V25.4348C73.1005 25.9086 73.1472 26.3524 73.2406 26.7661C73.3341 27.1799 73.4775 27.5435 73.6711 27.8572C73.8646 28.1708 74.1148 28.4177 74.4218 28.5979C74.7354 28.7714 75.1091 28.8582 75.5429 28.8582C75.97 28.8582 76.337 28.7714 76.644 28.5979C76.9509 28.4177 77.2012 28.1708 77.3947 27.8572C77.5949 27.5435 77.7417 27.1799 77.8351 26.7661C77.9286 26.3524 77.9753 25.9086 77.9753 25.4348V25.2246C77.9753 24.7575 77.9286 24.3204 77.8351 23.9133C77.7417 23.4996 77.5949 23.1359 77.3947 22.8223C77.2012 22.502 76.9476 22.2517 76.634 22.0715C76.327 21.8847 75.9566 21.7913 75.5229 21.7913C75.0958 21.7913 74.7288 21.8847 74.4218 22.0715C74.1148 22.2517 73.8646 22.502 73.6711 22.8223C73.4775 23.1359 73.3341 23.4996 73.2406 23.9133C73.1472 24.3204 73.1005 24.7575 73.1005 25.2246ZM85.3873 21.9915V34.9041H82.7347V19.9094H85.1871L85.3873 21.9915ZM92.3441 25.2146V25.4248C92.3441 26.2122 92.2507 26.943 92.0638 27.6169C91.8836 28.2843 91.6167 28.8682 91.263 29.3687C90.9093 29.8625 90.4689 30.2495 89.9417 30.5298C89.4212 30.8034 88.8206 30.9402 88.14 30.9402C87.4727 30.9402 86.8921 30.8134 86.3983 30.5598C85.9045 30.2996 85.4874 29.9325 85.1471 29.4587C84.8067 28.9849 84.5331 28.4344 84.3263 27.8071C84.1261 27.1732 83.9759 26.4825 83.8758 25.7351V25.0645C83.9759 24.2703 84.1261 23.5496 84.3263 22.9023C84.5331 22.2484 84.8067 21.6845 85.1471 21.2107C85.4874 20.7302 85.9011 20.3599 86.3883 20.0996C86.8821 19.8394 87.4593 19.7092 88.12 19.7092C88.8073 19.7092 89.4112 19.8394 89.9317 20.0996C90.4589 20.3599 90.9027 20.7336 91.263 21.2207C91.6234 21.7078 91.8936 22.2884 92.0738 22.9624C92.254 23.6364 92.3441 24.3871 92.3441 25.2146ZM89.6915 25.4248V25.2146C89.6915 24.7341 89.6481 24.2904 89.5614 23.8833C89.4746 23.4696 89.3412 23.1092 89.161 22.8022C88.9808 22.4886 88.7472 22.245 88.4603 22.0715C88.1733 21.898 87.8263 21.8113 87.4193 21.8113C87.0122 21.8113 86.6619 21.878 86.3683 22.0115C86.0746 22.1449 85.8344 22.3351 85.6475 22.582C85.4607 22.8289 85.3139 23.1226 85.2071 23.4629C85.107 23.7965 85.0403 24.1669 85.0069 24.574V26.2356C85.067 26.7294 85.1838 27.1732 85.3573 27.5669C85.5308 27.9606 85.7843 28.2743 86.118 28.5078C86.4583 28.7414 86.8988 28.8582 87.4393 28.8582C87.8464 28.8582 88.1934 28.7681 88.4803 28.5879C88.7673 28.4077 89.0008 28.1608 89.181 27.8472C89.3612 27.5269 89.4913 27.1598 89.5714 26.7461C89.6515 26.3324 89.6915 25.8919 89.6915 25.4248ZM97.0735 15.365V30.74H94.4209V15.365H97.0735ZM96.6531 24.9343H95.8723C95.8723 24.1803 95.9724 23.4862 96.1726 22.8523C96.3728 22.2183 96.6564 21.6678 97.0234 21.2007C97.3905 20.7269 97.8276 20.3599 98.3347 20.0996C98.8486 19.8394 99.4158 19.7092 100.036 19.7092C100.57 19.7092 101.054 19.786 101.488 19.9395C101.928 20.0863 102.305 20.3232 102.619 20.6501C102.933 20.9771 103.173 21.4042 103.34 21.9314C103.513 22.4519 103.6 23.0859 103.6 23.8333V30.74H100.937V23.8132C100.937 23.3127 100.864 22.919 100.717 22.6321C100.57 22.3385 100.36 22.1283 100.086 22.0015C99.8195 21.8747 99.4892 21.8113 99.0955 21.8113C98.6684 21.8113 98.3014 21.8947 97.9944 22.0615C97.6874 22.2217 97.4338 22.4452 97.2337 22.7322C97.0401 23.0191 96.8933 23.3494 96.7932 23.7231C96.6998 24.0968 96.6531 24.5006 96.6531 24.9343ZM108.94 19.9094V30.74H106.287V19.9094H108.94ZM106.107 17.0767C106.107 16.6829 106.241 16.356 106.507 16.0957C106.781 15.8354 107.148 15.7053 107.609 15.7053C108.069 15.7053 108.433 15.8354 108.7 16.0957C108.973 16.356 109.11 16.6829 109.11 17.0767C109.11 17.4637 108.973 17.7874 108.7 18.0476C108.433 18.3079 108.069 18.438 107.609 18.438C107.148 18.438 106.781 18.3079 106.507 18.0476C106.241 17.7874 106.107 17.4637 106.107 17.0767ZM117.633 28.4377V23.4429C117.633 23.0758 117.57 22.7589 117.443 22.4919C117.316 22.225 117.123 22.0181 116.862 21.8713C116.602 21.7245 116.272 21.6511 115.871 21.6511C115.518 21.6511 115.207 21.7112 114.941 21.8313C114.68 21.9514 114.48 22.1216 114.34 22.3418C114.2 22.5553 114.13 22.8022 114.13 23.0825H111.477C111.477 22.6354 111.584 22.2117 111.797 21.8113C112.011 21.4042 112.315 21.0439 112.708 20.7302C113.109 20.4099 113.586 20.1597 114.14 19.9795C114.7 19.7993 115.328 19.7092 116.022 19.7092C116.842 19.7092 117.573 19.8494 118.214 20.1296C118.861 20.4032 119.368 20.817 119.735 21.3708C120.109 21.9247 120.296 22.6221 120.296 23.4629V28.1875C120.296 28.728 120.329 29.1918 120.396 29.5789C120.469 29.9592 120.576 30.2896 120.716 30.5698V30.74H118.024C117.897 30.4664 117.8 30.1194 117.733 29.699C117.667 29.2719 117.633 28.8515 117.633 28.4377ZM118.004 24.1436L118.024 25.7151H116.352C115.938 25.7151 115.574 25.7585 115.261 25.8452C114.947 25.9253 114.69 26.0454 114.49 26.2056C114.29 26.359 114.14 26.5459 114.04 26.7661C113.94 26.9797 113.89 27.2232 113.89 27.4968C113.89 27.7638 113.95 28.004 114.07 28.2175C114.196 28.4311 114.377 28.6012 114.61 28.728C114.85 28.8481 115.131 28.9082 115.451 28.9082C115.918 28.9082 116.325 28.8148 116.672 28.6279C117.019 28.4344 117.289 28.2008 117.483 27.9272C117.677 27.6536 117.78 27.3934 117.793 27.1465L118.554 28.2876C118.461 28.5612 118.32 28.8515 118.134 29.1584C117.947 29.4654 117.707 29.7524 117.413 30.0193C117.119 30.2862 116.766 30.5064 116.352 30.6799C115.938 30.8534 115.458 30.9402 114.91 30.9402C114.21 30.9402 113.583 30.8 113.029 30.5198C112.475 30.2395 112.038 29.8558 111.717 29.3687C111.397 28.8815 111.237 28.3276 111.237 27.707C111.237 27.1331 111.344 26.626 111.557 26.1855C111.771 25.7451 112.088 25.3748 112.508 25.0745C112.929 24.7675 113.449 24.5373 114.07 24.3838C114.697 24.2236 115.414 24.1436 116.222 24.1436H118.004Z"
+                  fill="#1C162F" />
+                <g filter="url(#filter0_d_4029_1233)">
+                  <path
+                    d="M16.8213 9.81003C17.58 8.65971 18.8658 7.96747 20.2438 7.96747H35.0208C36.3988 7.96747 37.6847 8.65971 38.4434 9.81003L46.6434 22.2423C47.5466 23.6117 47.5466 25.3877 46.6434 26.7572L38.4434 39.1894C37.6847 40.3397 36.3988 41.032 35.0208 41.032H20.2438C18.8658 41.032 17.58 40.3397 16.8213 39.1894L8.62127 26.7572C7.71803 25.3877 7.71803 23.6117 8.62127 22.2423L16.8213 9.81003Z"
+                    fill="white" />
+                  <path
+                    d="M18.1262 12.8266C19.0364 11.4446 20.5803 10.6127 22.2352 10.6127H33.0294C34.6842 10.6127 36.2282 11.4446 37.1384 12.8266L43.0437 21.7937C44.1251 23.4357 44.1251 25.5638 43.0437 27.2058L37.1384 36.1729C36.2282 37.5549 34.6842 38.3869 33.0294 38.3869H22.2352C20.5803 38.3869 19.0364 37.5549 18.1262 36.1729L12.2208 27.2058C11.1395 25.5638 11.1395 23.4357 12.2208 21.7937L18.1262 12.8266Z"
+                    fill="#5D32D6" />
+                  <path
+                    d="M19.4343 15.8691C20.4932 14.2404 22.304 13.2578 24.2467 13.2578H31.018C32.9606 13.2578 34.7715 14.2404 35.8304 15.8691L39.4855 21.4913C40.7222 23.3937 40.7222 25.8461 39.4855 27.7486L35.8304 33.3707C34.7715 34.9995 32.9607 35.9821 31.018 35.9821H24.2467C22.304 35.9821 20.4932 34.9995 19.4343 33.3707L15.7792 27.7486C14.5424 25.8461 14.5424 23.3937 15.7792 21.4913L19.4343 15.8691Z"
+                    fill="white" />
+                </g>
+                <defs>
+                  <filter id="filter0_d_4029_1233" x="0.943847" y="0.967468" width="53.377" height="47.0645"
+                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha" />
+                    <feOffset />
+                    <feGaussianBlur stdDeviation="3.5" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_4029_1233" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_4029_1233" result="shape" />
+                  </filter>
+                </defs>
+              </svg>
+            </a>
+          </div>
+          <div class="header__right">
+            <button class="btn icon-link link-body-emphasi">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill"
+                viewBox="0 0 16 16">
+                <path
+                  d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+              </svg>
+              Настройки
+            </button>
+            <div class="dropdown">
+              <button class="btn dropdown-toggle user-menu-btn" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <div class="ava">
+                  <img
+                    src="https://ulibky.ru/wp-content/uploads/2019/10/avatarki_dlya_vatsap_dlya_devushek_42_28061027.jpg"
+                    alt="">
+                </div>
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#" class="btn icon-link link-body-emphasi">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-person" viewBox="0 0 16 16">
+                      <path
+                        d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
+                    </svg>
+                    Профиль
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="btn icon-link link-body-emphasi">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z" />
+                      <path fill-rule="evenodd"
+                        d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
+                    </svg>
+                    Выход
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="sidebar" id="js-sidebar">
+      <nav class="sidebar-nav">
+        <ul>
+          <li>
+            <a href="#" class="sidebar-nav-item active js-drop">
+              <span class="sidebar-nav-item__icn">
+                <i class="bi bi-card-list"></i>
+              </span>
+              <span class="sidebar-nav-item__txt">Пункт 1</span>
+              <span class="sidebar-nav-item__arrow">
+                <i class="bi bi-chevron-down"></i>
+              </span>
+            </a>
+            <ul>
+              <li>
+                <a href="#" class="sidebar-nav-item">
+                  <span class="sidebar-nav-item__icn">
+                    <i class="bi bi-card-list"></i>
+                  </span>
+                  <span class="sidebar-nav-item__txt">Подпункт 1_1</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="sidebar-nav-item">
+                  <span class="sidebar-nav-item__icn">
+                    <i class="bi bi-card-list"></i>
+                  </span>
+                  <span class="sidebar-nav-item__txt">Подпункт 1_2</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="sidebar-nav-item">
+                  <span class="sidebar-nav-item__icn">
+                    <i class="bi bi-card-list"></i>
+                  </span>
+                  <span class="sidebar-nav-item__txt">Подпункт 1_3</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="sidebar-nav-item js-drop">
+              <span class="sidebar-nav-item__icn">
+                <i class="bi bi-house-fill"></i>
+              </span>
+              <span class="sidebar-nav-item__txt">Пункт 2</span>
+              <span class="sidebar-nav-item__arrow">
+                <i class="bi bi-chevron-down"></i>
+              </span>
+            </a>
+            <ul>
+              <li>
+                <a href="#" class="sidebar-nav-item">
+                  <span class="sidebar-nav-item__icn">
+                    <i class="bi bi-house-fill"></i>
+                  </span>
+                  <span class="sidebar-nav-item__txt">Подпункт 2_1</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="sidebar-nav-item">
+                  <span class="sidebar-nav-item__icn">
+                    <i class="bi bi-house-fill"></i>
+                  </span>
+                  <span class="sidebar-nav-item__txt">Подпункт 2_2</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="sidebar-nav-item">
+                  <span class="sidebar-nav-item__icn">
+                    <i class="bi bi-house-fill"></i>
+                  </span>
+                  <span class="sidebar-nav-item__txt">Подпункт 2_3</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="sidebar-nav-item js-drop">
+              <span class="sidebar-nav-item__icn">
+                <i class="bi bi-currency-dollar"></i>
+              </span>
+              <span class="sidebar-nav-item__txt">Пункт 3</span>
+              <span class="sidebar-nav-item__arrow">
+                <i class="bi bi-chevron-down"></i>
+              </span>
+            </a>
+            <ul>
+              <li>
+                <a href="#" class="sidebar-nav-item">
+                  <span class="sidebar-nav-item__icn">
+                    <i class="bi bi-currency-dollar"></i>
+                  </span>
+                  <span class="sidebar-nav-item__txt">Подпункт 3_1</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="sidebar-nav-item">
+                  <span class="sidebar-nav-item__icn">
+                    <i class="bi bi-currency-dollar"></i>
+                  </span>
+                  <span class="sidebar-nav-item__txt">Подпункт 3_2</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="sidebar-nav-item">
+                  <span class="sidebar-nav-item__icn">
+                    <i class="bi bi-currency-dollar"></i>
+                  </span>
+                  <span class="sidebar-nav-item__txt">Подпункт 3_3</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="sidebar-nav-item js-drop">
+              <span class="sidebar-nav-item__icn">
+                <i class="bi bi-calendar-week-fill"></i>
+              </span>
+              <span class="sidebar-nav-item__txt">Пункт 4</span>
+              <span class="sidebar-nav-item__arrow">
+                <i class="bi bi-chevron-down"></i>
+              </span>
+            </a>
+            <ul>
+              <li>
+                <a href="#" class="sidebar-nav-item">
+                  <span class="sidebar-nav-item__icn">
+                    <i class="bi bi-calendar-week-fill"></i>
+                  </span>
+                  <span class="sidebar-nav-item__txt">Подпункт 4_1</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="sidebar-nav-item">
+                  <span class="sidebar-nav-item__icn">
+                    <i class="bi bi-calendar-week-fill"></i>
+                  </span>
+                  <span class="sidebar-nav-item__txt">Подпункт 4_2</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="sidebar-nav-item">
+                  <span class="sidebar-nav-item__icn">
+                    <i class="bi bi-calendar-week-fill"></i>
+                  </span>
+                  <span class="sidebar-nav-item__txt">Подпункт 4_3</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="sidebar-nav-item js-drop">
+              <span class="sidebar-nav-item__icn">
+                <i class="bi bi-people-fill"></i>
+              </span>
+              <span class="sidebar-nav-item__txt">Пункт 5</span>
+              <span class="sidebar-nav-item__arrow">
+                <i class="bi bi-chevron-down"></i>
+              </span>
+            </a>
+            <ul>
+              <li>
+                <a href="#" class="sidebar-nav-item">
+                  <span class="sidebar-nav-item__icn">
+                    <i class="bi bi-people-fill"></i>
+                  </span>
+                  <span class="sidebar-nav-item__txt">Подпункт 5_1</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="sidebar-nav-item">
+                  <span class="sidebar-nav-item__icn">
+                    <i class="bi bi-people-fill"></i>
+                  </span>
+                  <span class="sidebar-nav-item__txt">Подпункт 5_2</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="sidebar-nav-item">
+                  <span class="sidebar-nav-item__icn">
+                    <i class="bi bi-people-fill"></i>
+                  </span>
+                  <span class="sidebar-nav-item__txt">Подпункт 5_3</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="sidebar-nav-item js-drop">
+              <span class="sidebar-nav-item__icn">
+                <i class="bi bi-bar-chart-fill"></i>
+              </span>
+              <span class="sidebar-nav-item__txt">Пункт 6</span>
+              <span class="sidebar-nav-item__arrow">
+                <i class="bi bi-chevron-down"></i>
+              </span>
+            </a>
+            <ul>
+              <li>
+                <a href="#" class="sidebar-nav-item">
+                  <span class="sidebar-nav-item__icn">
+                    <i class="bi bi-bar-chart-fill"></i>
+                  </span>
+                  <span class="sidebar-nav-item__txt">Подпункт 6_1</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="sidebar-nav-item">
+                  <span class="sidebar-nav-item__icn">
+                    <i class="bi bi-bar-chart-fill"></i>
+                  </span>
+                  <span class="sidebar-nav-item__txt">Подпункт 6_2</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="sidebar-nav-item">
+                  <span class="sidebar-nav-item__icn">
+                    <i class="bi bi-bar-chart-fill"></i>
+                  </span>
+                  <span class="sidebar-nav-item__txt">Подпункт 6_3</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="sidebar-nav-item js-drop">
+              <span class="sidebar-nav-item__icn">
+                <i class="bi bi-megaphone-fill"></i>
+              </span>
+              <span class="sidebar-nav-item__txt">Пункт 7</span>
+              <span class="sidebar-nav-item__arrow">
+                <i class="bi bi-chevron-down"></i>
+              </span>
+            </a>
+            <ul>
+              <li>
+                <a href="#" class="sidebar-nav-item">
+                  <span class="sidebar-nav-item__icn">
+                    <i class="bi bi-megaphone-fill"></i>
+                  </span>
+                  <span class="sidebar-nav-item__txt">Подпункт 7_1</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="sidebar-nav-item">
+                  <span class="sidebar-nav-item__icn">
+                    <i class="bi bi-megaphone-fill"></i>
+                  </span>
+                  <span class="sidebar-nav-item__txt">Подпункт 7_2</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="sidebar-nav-item">
+                  <span class="sidebar-nav-item__icn">
+                    <i class="bi bi-megaphone-fill"></i>
+                  </span>
+                  <span class="sidebar-nav-item__txt">Подпункт 7_3</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <button class="btn sidebar-nav-item sidebar-nav-item--right" id="js-sidebar-toogler">
+        <span class="sidebar-nav-item__icn">
+          <i class="bi bi-chevron-right"></i>
+        </span>
+      </button>
+    </div>
+    <div class="main bg-color">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Реестры</a></li>
+        <li class="breadcrumb-item active">Группа объектов</li>
+      </ol>
+      <div class="block">
+        <div class="d-flex justify-content-between gap-3 bg-color">
+          <div class="d-flex rounded flex-column w-25 bg-white">
+            <div class="d-flex align-items-center gap-1 p-2 border-bottom">
+              <button class="btn" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                <i class="bi bi-plus-circle h4"></i>
+              </button>
+              <button class="btn" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                <i class="bi bi-trash3 h4"></i>
+              </button>
+              <button class="btn" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                <i class="bi bi-arrow-repeat h4"></i>
+              </button>
+            </div>
+            <div class="d-flex flex-column gap-0">
+              <div class="form p-2 ms-3 mt-1">
+                <i class="bi bi-search"></i>
+                <input type="text" class="form-control form-input" placeholder="">
+              </div>
+              <div class="tree-menu p-2">
+                <ul>
+                  <li>
+                    <a href="#menu0" data-bs-toggle="collapse" aria-expanded="false" aria-controls="menu0"
+                      class="collapsed">
+                      Задачи
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#menu1" data-bs-toggle="collapse" aria-expanded="false" aria-controls="menu1"
+                      class="collapsed">
+                      Графики
+                      <i class="bi bi-chevron-right"></i>
+                    </a>
+                    <ul id="menu1" class="collapse">
+                      <li><a href="#">График производства работ</a></li>
+                      <li><a href="#">График задач</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#menu2" data-bs-toggle="collapse" aria-expanded="false" aria-controls="menu2"
+                      class="collapsed">
+                      Справки
+                      <i class="bi bi-chevron-right"></i>
+                    </a>
+                    <ul id="menu2" class="collapse">
+                      <li><a href="#">График производства работ</a></li>
+                      <li><a href="#">График задач</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#menu3" data-bs-toggle="collapse" aria-expanded="false" aria-controls="menu3"
+                      class="collapsed">
+                      Реестры
+                      <i class="bi bi-chevron-right"></i>
+                    </a>
+                    <ul id="menu3" class="collapse">
+                      <li><a href="#">График производства работ</a></li>
+                      <li><a href="#">График задач</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#menu4" data-bs-toggle="collapse" aria-expanded="false" aria-controls="menu4"
+                      class="collapsed">
+                      Справочники
+                      <i class="bi bi-chevron-right"></i>
+                    </a>
+                    <ul id="menu4" class="collapse">
+                      <li><a href="#">График производства работ</a></li>
+                      <li><a href="#">График задач</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#menu5" data-bs-toggle="collapse" aria-expanded="false" aria-controls="menu5"
+                      class="collapsed">
+                      Карта
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#menu6" data-bs-toggle="collapse" aria-expanded="false" aria-controls="menu6"
+                      class="collapsed">
+                      Пользователи и безопасность
+                      <i class="bi bi-chevron-right"></i>
+                    </a>
+                    <ul id="menu6" class="collapse">
+                      <li><a href="#">График производства работ</a></li>
+                      <li><a href="#">График задач</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#menu7" data-bs-toggle="collapse" aria-expanded="false" aria-controls="menu7"
+                      class="collapsed">
+                      Службы и сервисы
+                      <i class="bi bi-chevron-right"></i>
+                    </a>
+                    <ul id="menu7" class="collapse">
+                      <li><a href="#">График производства работ</a></li>
+                      <li><a href="#">График задач</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#menu8" data-bs-toggle="collapse" aria-expanded="false" aria-controls="menu8"
+                      class="collapsed">
+                      Файловое хранилище
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#menu9" data-bs-toggle="collapse" aria-expanded="false" aria-controls="menu9"
+                      class="collapsed">
+                      Отчеты по импорту данных
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-column gap-2 w-75">
+            <div class="d-flex justify-content-end p-3 rounded main-bg">
+              <button type="button" class="btn bg-purple text-white">Сохранить</button>
+            </div>
+            <div class="d-flex justify-content-end p-3 rounded bg-white">
+              <div class="d-flex flex-column gap-3 w-100 ms-5">
+                <div class="d-flex gap-4">
+                  <label for="exampleTextarea" class="form-label mt-1 text-nowrap w-25 text-end">Заголовок</label>
+                  <textarea class="form-control w-75" id="exampleTextarea" rows="3" placeholder="Название"
+                    pl></textarea>
+                </div>
+                <div class="d-flex align-items-center gap-4">
+                  <label for="tekh-maska" class="form-label w-25 text-end">Техническое название</label>
+                  <input type="text" class="form-control w-75" id="tekh-maska"
+                    placeholder="Маска технического названия">
+                </div>
+                <div class="d-flex align-items-center gap-4">
+                  <p class="w-25 text-end m-0">Состояние</p>
+                  <div class="w-75">
+                    <button type="button" class="btn bg-purple text-white facality-btn p-2">Сохранить</button>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-4">
+                  <p class="w-25 text-end m-0">Панель управления</p>
+                  <div class="w-75">
+                    <button type="button" class="btn bg-purple text-white facality-btn p-2" data-bs-toggle="modal" data-bs-target="#changeControlPanel">Редактировать</button>
+                  </div>
+                </div>
+                <div class="d-flex gap-4">
+                  <p class="w-25 text-end m-0">Компоненты просмотра</p>
+                  <div class="d-flex flex-column w-75">
+                    <ul class="nav nav-tabs" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <a class="nav-link active" data-bs-toggle="tab" href="#details" aria-selected="true"
+                          role="tab">Детали</a>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <a class="nav-link" data-bs-toggle="tab" href="#list" aria-selected="false" tabindex="-1"
+                          role="tab">Список</a>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <a class="nav-link" data-bs-toggle="tab" href="#preview" aria-selected="false" tabindex="-1"
+                          role="tab">Просмотр</a>
+                      </li>
+                    </ul>
+                    <div id="myTabContent" class="tab-content border-start">
+                      <div class="d-flex gap-0 align-items-center">
+                        <button class="btn">
+                          <i class="bi bi-pencil"></i>
+                        </button>
+                        <button class="btn">
+                          <i class="bi bi-nut"></i>
+                        </button>
+                        <button class="btn">
+                          <i class="bi bi-list-ul"></i>
+                        </button>
+                        <button class="btn">
+                          <i class="bi bi-wrench-adjustable-circle"></i>
+                        </button>
+                        <button class="btn">
+                          <i class="bi bi-list-ul"></i>
+                        </button>
+                      </div>
+                      <div class="tab-pane fade show active p-4" id="details" role="tabpanel">
+                        <div class="d-flex flex-column rounded-3 border preview-component">
+                          <div class="d-flex align-items-center">
+                            <span class="px-5 py-3 border-end border-bottom">
+                              <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+                            </span>
+                            <div class="px-4 py-3 border-bottom w-100">
+                              <span>Property Name</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <span class="px-5 py-3 border-end border-bottom">
+                              <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+                            </span>
+                            <div class="px-4 py-3 border-bottom w-100">
+                              <span>Property Name</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <span class="px-5 py-3 border-end border-bottom">
+                              <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+                            </span>
+                            <div class="px-4 py-3 border-bottom w-100">
+                              <span>Property Name</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <span class="px-5 py-3 border-end border-bottom">
+                              <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+                            </span>
+                            <div class="px-4 py-3 border-bottom w-100">
+                              <span>Property Name</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <span class="px-5 py-3 border-end border-bottom">
+                              <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+                            </span>
+                            <div class="px-4 py-3 border-bottom w-100">
+                              <span>Property Name</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <span class="px-5 py-3 border-end border-bottom">
+                              <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+                            </span>
+                            <div class="px-4 py-3 border-bottom w-100">
+                              <span>Property Name</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <span class="px-5 py-3 border-end border-bottom">
+                              <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+                            </span>
+                            <div class="px-4 py-3 border-bottom w-100">
+                              <span>Property Name</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <span class="px-5 py-3 border-end border-bottom">
+                              <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+                            </span>
+                            <div class="px-4 py-3 border-bottom w-100">
+                              <span>Property Name</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <span class="px-5 py-3 border-end border-bottom">
+                              <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+                            </span>
+                            <div class="px-4 py-3 border-bottom w-100">
+                              <span>Property Name</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <span class="px-5 py-3 border-end border-bottom">
+                              <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+                            </span>
+                            <div class="px-4 py-3 border-bottom w-100">
+                              <span>Property Name</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <span class="px-5 py-3 border-end border-bottom">
+                              <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+                            </span>
+                            <div class="px-4 py-3 border-bottom w-100">
+                              <span>Property Name</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <span class="px-5 py-3 border-end">
+                              <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+                            </span>
+                            <div class="px-4 py-3 w-100">
+                              <span>Property Name</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade p-4" id="list" role="tabpanel">
+                        <div class="d-flex flex-column rounded-3 border preview-component">
+                          <div class="d-flex align-items-center">
+                            <span class="px-5 py-3 border-end border-bottom">
+                              <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+                            </span>
+                            <div class="px-4 py-3 border-bottom w-100">
+                              <span>Property Name</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <span class="px-5 py-3 border-end border-bottom">
+                              <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+                            </span>
+                            <div class="px-4 py-3 border-bottom w-100">
+                              <span>Property Name</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <span class="px-5 py-3 border-end">
+                              <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+                            </span>
+                            <div class="px-4 py-3 w-100">
+                              <span>Property Name</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade p-4" id="preview" role="tabpanel">
+                        <div class="d-flex flex-column rounded-3 border preview-component">
+                          <div class="d-flex align-items-center">
+                            <span class="px-5 py-3 border-end border-bottom">
+                              <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+                            </span>
+                            <div class="px-4 py-3 border-bottom w-100">
+                              <span>Property Name</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <span class="px-5 py-3 border-end border-bottom">
+                              <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+                            </span>
+                            <div class="px-4 py-3 border-bottom w-100">
+                              <span>Property Name</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <span class="px-5 py-3 border-end border-bottom">
+                              <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+                            </span>
+                            <div class="px-4 py-3 border-bottom w-100">
+                              <span>Property Name</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <span class="px-5 py-3 border-end border-bottom">
+                              <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+                            </span>
+                            <div class="px-4 py-3 border-bottom w-100">
+                              <span>Property Name</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <span class="px-5 py-3 border-end">
+                              <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+                            </span>
+                            <div class="px-4 py-3 w-100">
+                              <span>Property Name</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-4">
+                  <label for="tekh-maska" class="form-label w-25 text-end">Тип списка</label>
+                  <input type="text" class="form-control w-75" id="tekh-maska" placeholder="Маска типа списка">
+                </div>
+                <div class="d-flex align-items-center gap-4">
+                  <p class="w-25 text-end m-0">Патч</p>
+                  <div class="w-75">
+                    <button type="button" class="btn bg-purple text-white facality-btn p-2">Редактировать</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="changeControlPanel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="changeControlPanelLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content mw-100">
+        <div class="modal-header modal-bg">
+          <div class="d-flex align-items-center justify-content-between w-100">
+            <p class="m-0 text-white">Панель управления</p>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="modal-body p-0">
+          <div class="d-flex align-items-center justify-content-end p-3">
+            <div class="d-flex align-items-center gap-2">
+              <button type="button" class="btn bg-purple text-white p-2">Сохранить</button>
+              <button type="button" class="btn btn-outline-purple text-white p-2">Сохранить и закрыть</button>
+            </div>
+          </div>
+          <div class="d-flex flex-column mt-2">
+            <div class="d-flex align-items-center justify-content-between border-bottom p-3">
+              <div class="d-flex align-items-center gap-5">
+                <i class="bi bi-folder-plus"></i>
+                <span>Grid view</span>
+                <span>Название</span>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="utut">
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between border-bottom p-3">
+              <div class="d-flex align-items-center gap-5">
+                <i class="bi bi-plus-circle"></i>
+                <span>Grid view</span>
+                <span>Название</span>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="utut">
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between border-bottom p-3">
+              <div class="d-flex align-items-center gap-5">
+                <i class="bi bi-copy"></i>
+                <span>Grid view</span>
+                <span>Название</span>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="utut">
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between border-bottom p-3">
+              <div class="d-flex align-items-center gap-5">
+                <i class="bi bi-pen"></i>
+                <span>Grid view</span>
+                <span>Название</span>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="utut">
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between border-bottom p-3">
+              <div class="d-flex align-items-center gap-5">
+                <i class="bi bi-eye"></i>
+                <span>Grid view</span>
+                <span>Название</span>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="utut">
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between border-bottom p-3">
+              <div class="d-flex align-items-center gap-5">
+                <i class="bi bi-trash3"></i>
+                <span>Grid view</span>
+                <span>Название</span>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="utut">
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between border-bottom p-3">
+              <div class="d-flex align-items-center gap-5">
+                <i class="bi bi-arrow-repeat"></i>
+                <span>Grid view</span>
+                <span>Название</span>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="utut">
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between border-bottom p-3">
+              <div class="d-flex align-items-center gap-5">
+                <i class="bi bi-download"></i>
+                <span>Grid view</span>
+                <span>Название</span>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="utut">
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between border-bottom p-3">
+              <div class="d-flex align-items-center gap-5">
+                <i class="bi bi-upload"></i>
+                <span>Grid view</span>
+                <span>Название</span>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="utut">
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between border-bottom p-3">
+              <div class="d-flex align-items-center gap-5">
+                <i class="bi bi-nut"></i>
+                <span>Grid view</span>
+                <span>Название</span>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="utut">
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between border-bottom p-3">
+              <div class="d-flex align-items-center gap-5">
+                <i class="bi bi-list-ul"></i>
+                <span>Grid view</span>
+                <span>Название</span>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="utut">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/facality.js"></script>
+</body>
+
+</html>

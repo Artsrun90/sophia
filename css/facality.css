@@ -1,0 +1,94 @@
+.form {
+  position: relative;
+}
+
+.form .bi-search {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 16px;
+  color: #D5D5D5;
+}
+
+.tree-menu ul {
+  list-style-type: none;
+  padding-left: 1rem;
+}
+
+.tree-menu ul:first-child li {
+  margin-bottom: 1rem;
+}
+
+.tree-menu ul li:first-child {
+  margin-top: 0.5rem;
+}
+
+.tree-menu ul:not(:first-child) li {
+  margin-bottom: 0.5rem;
+}
+
+.tree-menu li {
+  position: relative;
+}
+.tree-menu li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+.tree-menu li a i {
+  margin-left: 7px;
+  transition: transform 0.3s;
+  -webkit-text-stroke: 1px;
+  font-size: 10px;
+}
+.tree-menu li a:not(.collapsed) i {
+  transform: rotate(90deg);
+}
+
+.facality-btn {
+  max-width: 296px;
+  width: 100%;
+}
+
+.bg-purple:hover {
+  background-color: var(--purple-hover) !important;
+}
+
+.btn-outline-purple {
+  background-color: white !important;
+  border: 1px solid var(--purple) !important;
+  color: var(--purple) !important;
+}
+
+.btn-outline-purple:hover {
+  background-color: var(--purple) !important;
+  color: white !important;
+}
+
+.nav-link.active,
+.nav-link {
+  color: #1C162F !important;
+}
+
+.preview-component {
+  overflow-y: auto;
+  max-height: 200px;
+}
+
+.modal-dialog {
+  max-width: 936px;
+}
+
+.form-check-input {
+  height: 1.3rem;
+}
+
+.form-switch .form-check-input {
+  width: 2.3rem;
+}
+
+.form-check-input:checked {
+  background-color: var(--purple-hover);
+  border-color: var(--purple-hover);
+}
