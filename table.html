@@ -18,6 +18,11 @@
     <header class="header">
       <div class="container-fluid">
         <div class="header__wrap">
+          <div class="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
           <div class="header__left">
             <button type="button" class="btn btn-lg menu-btn" id="js-mob-menu-btn">
               <i class="bi bi-list"></i>
@@ -385,7 +390,7 @@
       </ol>
       <div class="border block">
         <div class="d-flex justify-content-between align-items-center gap-3">
-          <div class="d-flex justify-content-start align-items-center gap-3">
+          <div class="d-flex justify-content-start align-items-center gap-3 overflow-x-auto">
             <div class="btn-group tools" role="group" aria-label="Basic example">
               <button class="btn btn-lg btn-light" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
                 <i class="bi bi-folder-plus"></i>
@@ -425,7 +430,7 @@
               <input class="form-check-input" type="checkbox" role="switch" id="delete-switcher">
               <label class="form-check-label" for="delete-switcher">Удаление</label>
             </div>
-            <form method="get" action="#" class="input-group" role="search">
+            <form method="get" action="#" class="input-group" style="min-width: 140px;" role="search">
               <input type="search" name="search" class="form-control" placeholder="Поиск" required>
               <button type="button" class="btn btn-primary" data-mdb-ripple-init>
                 <i class="bi bi-search"></i>
@@ -779,7 +784,7 @@
           </div>
         </div>
         <div class="modal-body p-0">
-          <div class="d-flex align-items-center justify-content-between p-3">
+          <div class="d-flex flex-column flex-sm-row align-items-center justify-content-between p-3">
             <div class="d-flex gap-0 align-items-center">
               <button class="btn">
                 <i class="bi bi-arrow-repeat"></i>
@@ -794,23 +799,23 @@
                 <i class="bi bi-copy"></i>
               </button>
             </div>
-            <div class="d-flex align-items-center gap-2">
+            <div class="d-flex align-items-center gap-2 modal-btns">
               <button type="button" class="btn bg-purple text-white p-2">Сохранить</button>
               <button type="button" class="btn btn-outline-purple text-white p-2">Сохранить и закрыть</button>
             </div>
           </div>
           <div class="d-flex flex-column mt-2">
             <div class="d-flex flex-column gap-3 border-bottom p-3">
-              <div class="d-flex align-items-center gap-4 w-100">
+              <div class="d-flex flex-column flex-sm-row align-items-start align-item gap-1 gap-sm-4 w-100">
                 <label for="tekh-maska" class="form-label text-end w-15">Название</label>
                 <input type="text" value="" class="form-control is-valid border-burple w-100" id="inputValid"
                   placeholder="Меню адмиадминистратора">
               </div>
-              <div class="d-flex align-items-center gap-4 w-100">
+              <div class="d-flex flex-column flex-sm-row align-items-start align-item gap-1 gap-sm-4 w-100">
                 <label for="tekh-maska" class="form-label text-end w-15">Порядок</label>
                 <input type="text" value="0" class="form-control w-100" id="inputValid" placeholder="">
               </div>
-              <div class="d-flex gap-4 w-100">
+              <div class="d-flex flex-column flex-sm-row align-items-start align-item gap-1 gap-sm-4 w-100">
                 <p class="text-end w-15">Элементы</p>
                 <div class="d-flex flex-column gap-2 border rounded p-3 w-100">
                   <div class="d-flex align-items-center gap-3 pt-1 pb-1">
@@ -947,7 +952,7 @@
           </div>
         </div>
         <div class="modal-body p-0">
-          <div class="d-flex align-items-center justify-content-end gap-2 p-2">
+          <div class="d-flex align-items-center justify-content-end gap-2 p-2 modal-btns">
             <button type="button" class="btn btn-outline-purple text-white p-2">Выбрать и закрыть</button>
           </div>
 
@@ -1312,7 +1317,7 @@
                 <i class="bi bi-arrow-right-square"></i>
               </button>
             </div>
-            <div class="d-flex align-items-center gap-2">
+            <div class="d-flex align-items-center gap-2 modal-btns">
               <button type="button" class="btn bg-purple text-white p-2">Сохранить</button>
               <button type="button" class="btn btn-outline-purple text-white p-2">Сохранить и закрыть</button>
             </div>
@@ -1355,13 +1360,14 @@
             <div id="tab-content-2" class="tab-content">
               <div id="baseTab" class="tab-pane fade show active mt-4" role="tabpanel">
                 <div class="d-flex flex-column gap-3 px-3">
-                  <div class="d-flex align-items-center gap-4 w-100">
+                  <div class="d-flex flex-column flex-sm-row align-items-start align-item gap-1 gap-sm-4 w-100">
                     <label for="tekh-maska" class="form-label text-end w-15">Название</label>
                     <input type="text" value="" class="form-control w-100" id="inputValid"
                       placeholder="Название карточки">
                   </div>
-                  <div class="d-flex align-items-center gap-4 w-100 position-relative">
-                    <label for="tekh-maska" class="form-label text-end w-15">Тип*</label>
+                  <div
+                    class="d-flex flex-column flex-sm-row align-items-start align-item gap-1 gap-sm-4 w-100 position-relative">
+                    <label for="tekh-maska" class="form-label text-start text-sm-end w-15">Тип*</label>
                     <div class="type-dropdown-container w-100">
                       <input type="text" class="type-dropdown-input form-control w-100" placeholder="Select an item"
                         readonly>
@@ -1379,49 +1385,49 @@
                     </div>
                     <!-- <input type="text" value="" class="form-control w-100" id="inputValid" placeholder="Тип данных в карточке (выпадающий список)"> -->
                   </div>
-                  <div class="d-flex gap-4 w-100">
+                  <div class="d-flex flex-column flex-sm-row align-items-start align-item gap-1 gap-sm-4 w-100">
                     <label for="exampleTextarea" class="form-label w-15 text-end">Заголовок</label>
                     <textarea class="form-control w-100" id="exampleTextarea" rows="3" placeholder="Название"
                       pl=""></textarea>
                   </div>
-                  <div class="d-flex gap-4 w-100">
+                  <div class="d-flex flex-column flex-sm-row align-items-start align-item gap-1 gap-sm-4 w-100">
                     <label for="exampleTextarea" class="form-label w-15 text-end">IsDemo</label>
                     <div class="form-check form-switch w-100">
                       <input class="form-check-input" type="checkbox" role="switch" id="utut">
                     </div>
                   </div>
-                  <div class="d-flex gap-4 w-100">
+                  <div class="d-flexflex-column flex-sm-row align-items-start align-item gap-1 gap-sm-4w-100">
                     <label for="exampleTextarea" class="form-label w-15 text-end">Дата</label>
                     <div class="w-100">
                       <input type="date" class="form-control w-25">
                     </div>
                   </div>
-                  <div class="d-flex gap-4 w-100">
+                  <div class="d-flex flex-column flex-sm-row align-items-start align-item gap-1 gap-sm-4 w-100">
                     <label for="exampleTextarea" class="form-label w-15 text-end">Дата и время</label>
                     <div class="d-flex gap-2 w-100">
                       <input type="datetime-local" class="form-control w-25">
                     </div>
                   </div>
-                  <div class="d-flex gap-4 w-100">
+                  <div class="d-flex flex-column flex-sm-row align-items-start align-item gap-1 gap-sm-4 w-100">
                     <label for="exampleTextarea" class="form-label w-15 text-end">Период дат</label>
-                    <div class="d-flex gap-3 w-100">
+                    <div class="d-flex flex-column flex-sm-column gap-3 w-100">
                       <input type="date" class="form-control w-25">
                       <input type="date" class="form-control w-25">
                     </div>
                   </div>
-                  <div class="d-flex gap-4 w-100">
+                  <div class="d-flex flex-column flex-sm-row align-items-start align-item gap-1 gap-sm-4 w-100">
                     <label for="exampleTextarea" class="form-label w-15 text-end">Период</label>
-                    <div class="d-flex gap-3 w-100">
+                    <div class="d-flex flex-column flex-sm-column gap-3 w-100">
                       <input type="datetime-local" class="form-control w-25">
                       <input type="datetime-local" class="form-control w-25">
                     </div>
                   </div>
-                  <div class="d-flex gap-4 w-100">
+                  <div class="d-flex flex-column flex-sm-row align-items-start align-item gap-1 gap-sm-4 w-100">
                     <label for="exampleTextarea" class="form-label w-15 text-end">Таблица</label>
                     <div class="w-85 rounded border overflow-x-auto">
 
                       <div class="d-flex justify-content-start align-items-center gap-3">
-                        <div class="btn-group tools" role="group" aria-label="Basic example">
+                        <div class="btn-group tools flex-wrap" role="group" aria-label="Basic example">
                           <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
                             <i class="bi bi-folder-plus"></i>
                           </button>
@@ -1524,7 +1530,7 @@
                               <input type="search" class="form-control" aria-label="Search">
                             </div>
                           </div>
-              
+
                           <!-- grid-header row B -->
                           <div class="grid-item grid-header"></div>
                           <div class="grid-item grid-header">
@@ -1600,10 +1606,12 @@
                           </div>
                         </div>
                         <!-- Body rows -->
-              
-              
+
+
                         <ul id="tree-view-3" class="ui-sortable tree-view" style="--tree-sortable-depth: 30px;">
-                          <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1" style="z-index: 6; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
+                          <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0"
+                            data-level="1"
+                            style="z-index: 6; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
                             <div class="grid-container">
                               <div class="table-row-item">
                                 <div class="btn branch-drag-handler ui-sortable-handle">
@@ -1627,7 +1635,9 @@
                             </div>
                             <div class="children-bus"></div>
                           </li>
-                          <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1" style="z-index: 5; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
+                          <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0"
+                            data-level="1"
+                            style="z-index: 5; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
                             <div class="grid-container">
                               <div class="table-row-item">
                                 <div class="btn branch-drag-handler ui-sortable-handle">
@@ -1651,7 +1661,9 @@
                             </div>
                             <div class="children-bus"></div>
                           </li>
-                          <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1" style="z-index: 4; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
+                          <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0"
+                            data-level="1"
+                            style="z-index: 4; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
                             <div class="grid-container">
                               <div class="table-row-item">
                                 <div class="btn branch-drag-handler ui-sortable-handle">
@@ -1675,7 +1687,9 @@
                             </div>
                             <div class="children-bus"></div>
                           </li>
-                          <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1" style="z-index: 3; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
+                          <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0"
+                            data-level="1"
+                            style="z-index: 3; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
                             <div class="grid-container">
                               <div class="table-row-item">
                                 <div class="btn branch-drag-handler ui-sortable-handle">
@@ -1699,7 +1713,9 @@
                             </div>
                             <div class="children-bus"></div>
                           </li>
-                          <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1" style="z-index: 2; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
+                          <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0"
+                            data-level="1"
+                            style="z-index: 2; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
                             <div class="grid-container">
                               <div class="table-row-item">
                                 <div class="btn branch-drag-handler ui-sortable-handle">
@@ -1723,7 +1739,9 @@
                             </div>
                             <div class="children-bus"></div>
                           </li>
-                          <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1" style="z-index: 1; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
+                          <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0"
+                            data-level="1"
+                            style="z-index: 1; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
                             <div class="grid-container">
                               <div class="table-row-item">
                                 <div class="btn branch-drag-handler ui-sortable-handle">
@@ -1748,8 +1766,8 @@
                             <div class="children-bus"></div>
                           </li>
                         </ul>
-              
-              
+
+
                       </div>
 
                       <div class="d-flex justify-content-between align-items-center gap-3 main-table-footer p-2">
@@ -1796,7 +1814,7 @@
       </div>
     </div>
   </div>
-  
+
   <!-- Modal --- Item Карточка  -->
   <div class="modal fade" id="cardItemModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="cardItemModalLabel" aria-hidden="true">
@@ -1805,7 +1823,8 @@
         <div class="modal-header modal-bg">
           <div class="d-flex align-items-center justify-content-between w-100">
             <p class="m-0 text-white">Карточка</p>
-            <button type="button" class="btn-close btn-close-white close-cart-item-modal" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button type="button" class="btn-close btn-close-white close-cart-item-modal" data-bs-dismiss="modal"
+              aria-label="Close"></button>
           </div>
         </div>
         <div class="modal-body p-0">
@@ -1827,7 +1846,7 @@
                 <i class="bi bi-arrow-right-square"></i>
               </button>
             </div>
-            <div class="d-flex align-items-center gap-2">
+            <div class="d-flex align-items-center gap-2 modal-btns">
               <button type="button" class="btn bg-purple text-white p-2">Сохранить</button>
               <button type="button" class="btn btn-outline-purple text-white p-2">Сохранить и закрыть</button>
             </div>
@@ -1976,7 +1995,7 @@
                           <input type="search" class="form-control" aria-label="Search">
                         </div>
                       </div>
-          
+
                       <!-- grid-header row B -->
                       <div class="grid-item grid-header"></div>
                       <div class="grid-item grid-header">
@@ -2052,10 +2071,11 @@
                       </div>
                     </div>
                     <!-- Body rows -->
-          
-          
+
+
                     <ul id="tree-view-4" class="ui-sortable tree-view" style="--tree-sortable-depth: 30px;">
-                      <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1" style="z-index: 6; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
+                      <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1"
+                        style="z-index: 6; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
                         <div class="grid-container">
                           <div class="table-row-item">
                             <div class="btn branch-drag-handler ui-sortable-handle">
@@ -2079,7 +2099,8 @@
                         </div>
                         <div class="children-bus"></div>
                       </li>
-                      <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1" style="z-index: 5; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
+                      <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1"
+                        style="z-index: 5; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
                         <div class="grid-container">
                           <div class="table-row-item">
                             <div class="btn branch-drag-handler ui-sortable-handle">
@@ -2103,7 +2124,8 @@
                         </div>
                         <div class="children-bus"></div>
                       </li>
-                      <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1" style="z-index: 4; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
+                      <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1"
+                        style="z-index: 4; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
                         <div class="grid-container">
                           <div class="table-row-item">
                             <div class="btn branch-drag-handler ui-sortable-handle">
@@ -2127,7 +2149,8 @@
                         </div>
                         <div class="children-bus"></div>
                       </li>
-                      <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1" style="z-index: 3; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
+                      <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1"
+                        style="z-index: 3; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
                         <div class="grid-container">
                           <div class="table-row-item">
                             <div class="btn branch-drag-handler ui-sortable-handle">
@@ -2151,7 +2174,8 @@
                         </div>
                         <div class="children-bus"></div>
                       </li>
-                      <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1" style="z-index: 2; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
+                      <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1"
+                        style="z-index: 2; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
                         <div class="grid-container">
                           <div class="table-row-item">
                             <div class="btn branch-drag-handler ui-sortable-handle">
@@ -2175,7 +2199,8 @@
                         </div>
                         <div class="children-bus"></div>
                       </li>
-                      <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1" style="z-index: 1; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
+                      <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1"
+                        style="z-index: 1; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
                         <div class="grid-container">
                           <div class="table-row-item">
                             <div class="btn branch-drag-handler ui-sortable-handle">
@@ -2200,8 +2225,8 @@
                         <div class="children-bus"></div>
                       </li>
                     </ul>
-          
-          
+
+
                   </div>
 
                   <div class="d-flex justify-content-between align-items-center gap-3 main-table-footer p-2">
@@ -2254,6 +2279,7 @@
   <script src="js/jquery-ui.min.js"></script>
   <script src="js/treeSortable.js"></script>
   <script src="js/jquery.custom.js"></script>
+  <script src="js/common.js"></script>
 </body>
 
 </html>
