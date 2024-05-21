@@ -376,6 +376,9 @@
       </button>
     </div>
     <div class="main">
+      <button class="btn bg-purple text-white p-2" data-bs-toggle="modal" data-bs-target="#administratoMenu">Меню
+        администратора</button>
+      <button class="btn bg-purple text-white p-2" data-bs-toggle="modal" data-bs-target="#cardModal">Карточка</button>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#">Реестры</a></li>
         <li class="breadcrumb-item active">Группа объектов</li>
@@ -763,6 +766,508 @@
       </div>
     </div>
   </div>
+
+  <!-- Modal --- Меню администратора  -->
+  <div class="modal fade" id="administratoMenu" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="administratoMenuLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content mw-100">
+        <div class="modal-header modal-bg">
+          <div class="d-flex align-items-center justify-content-between w-100">
+            <p class="m-0 text-white">Меню администратора </p>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="modal-body p-0">
+          <div class="d-flex align-items-center justify-content-between p-3">
+            <div class="d-flex gap-0 align-items-center">
+              <button class="btn">
+                <i class="bi bi-arrow-repeat"></i>
+              </button>
+              <button class="btn">
+                <i class="bi bi-nut"></i>
+              </button>
+              <button class="btn">
+                <i class="bi bi-code-slash"></i>
+              </button>
+              <button class="btn">
+                <i class="bi bi-copy"></i>
+              </button>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <button type="button" class="btn bg-purple text-white p-2">Сохранить</button>
+              <button type="button" class="btn btn-outline-purple text-white p-2">Сохранить и закрыть</button>
+            </div>
+          </div>
+          <div class="d-flex flex-column mt-2">
+            <div class="d-flex flex-column gap-3 border-bottom p-3">
+              <div class="d-flex align-items-center gap-4 w-100">
+                <label for="tekh-maska" class="form-label text-end w-15">Название</label>
+                <input type="text" value="" class="form-control is-valid border-burple w-100" id="inputValid"
+                  placeholder="Меню адмиадминистратора">
+              </div>
+              <div class="d-flex align-items-center gap-4 w-100">
+                <label for="tekh-maska" class="form-label text-end w-15">Порядок</label>
+                <input type="text" value="0" class="form-control w-100" id="inputValid" placeholder="">
+              </div>
+              <div class="d-flex gap-4 w-100">
+                <p class="text-end w-15">Элементы</p>
+                <div class="d-flex flex-column gap-2 border rounded p-3 w-100">
+                  <div class="d-flex align-items-center gap-3 pt-1 pb-1">
+                    <button class="btn p-0" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                      <i class="bi bi-folder-plus"></i>
+                    </button>
+                    <button class="btn p-0" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                      <i class="bi bi-plus-circle"></i>
+                    </button>
+                    <button class="btn p-0" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                      <i class="bi bi-pen"></i>
+                    </button>
+                    <button class="btn p-0" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                      <i class="bi bi-trash3"></i>
+                    </button>
+                  </div>
+                  <div class="form">
+                    <i class="bi bi-search"></i>
+                    <input type="text" class="form-control form-input" placeholder="">
+                  </div>
+                  <div class="tree-menu px-3">
+                    <ul class="popup-tree">
+                      <li>
+                        <a href="#menu0" data-bs-toggle="collapse" aria-expanded="false" aria-controls="menu0"
+                          class="collapsed">
+                          Задачи
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#menu1" data-bs-toggle="collapse" aria-expanded="false" aria-controls="menu1"
+                          class="collapsed">
+                          Графики
+                          <i class="bi bi-chevron-right"></i>
+                        </a>
+                        <ul id="menu1" class="collapse px-5">
+                          <li><a href="#">График производства работ</a></li>
+                          <li><a href="#">График задач</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#menu2" data-bs-toggle="collapse" aria-expanded="false" aria-controls="menu2"
+                          class="collapsed">
+                          Справки
+                          <i class="bi bi-chevron-right"></i>
+                        </a>
+                        <ul id="menu2" class="collapse px-5">
+                          <li><a href="#">График производства работ</a></li>
+                          <li><a href="#">График задач</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#menu3" data-bs-toggle="collapse" aria-expanded="false" aria-controls="menu3"
+                          class="collapsed">
+                          Реестры
+                          <i class="bi bi-chevron-right"></i>
+                        </a>
+                        <ul id="menu3" class="collapse px-5">
+                          <li><a href="#">График производства работ</a></li>
+                          <li><a href="#">График задач</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#menu4" data-bs-toggle="collapse" aria-expanded="false" aria-controls="menu4"
+                          class="collapsed">
+                          Справочники
+                          <i class="bi bi-chevron-right"></i>
+                        </a>
+                        <ul id="menu4" class="collapse px-5">
+                          <li><a href="#">График производства работ</a></li>
+                          <li><a href="#">График задач</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#menu5" data-bs-toggle="collapse" aria-expanded="false" aria-controls="menu5"
+                          class="collapsed">
+                          Карта
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#menu6" data-bs-toggle="collapse" aria-expanded="false" aria-controls="menu6"
+                          class="collapsed">
+                          Пользователи и безопасность
+                          <i class="bi bi-chevron-right"></i>
+                        </a>
+                        <ul id="menu6" class="collapse px-5">
+                          <li><a href="#">График производства работ</a></li>
+                          <li><a href="#">График задач</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#menu7" data-bs-toggle="collapse" aria-expanded="false" aria-controls="menu7"
+                          class="collapsed">
+                          Службы и сервисы
+                          <i class="bi bi-chevron-right"></i>
+                        </a>
+                        <ul id="menu7" class="collapse px-5">
+                          <li><a href="#">График производства работ</a></li>
+                          <li><a href="#">График задач</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#menu8" data-bs-toggle="collapse" aria-expanded="false" aria-controls="menu8"
+                          class="collapsed">
+                          Файловое хранилище
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#menu9" data-bs-toggle="collapse" aria-expanded="false" aria-controls="menu9"
+                          class="collapsed">
+                          Отчеты по импорту данных
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal --- Карточка  -->
+  <div class="modal fade" id="cardModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="cardModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content mw-100">
+        <div class="modal-header modal-bg">
+          <div class="d-flex align-items-center justify-content-between w-100">
+            <p class="m-0 text-white">Карточка</p>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="modal-body p-0">
+          <div class="d-flex align-items-center justify-content-between p-3">
+            <div class="d-flex gap-0 align-items-center">
+              <button class="btn">
+                <i class="bi bi-arrow-repeat"></i>
+              </button>
+              <button class="btn">
+                <i class="bi bi-nut"></i>
+              </button>
+              <button class="btn">
+                <i class="bi bi-code-slash"></i>
+              </button>
+              <button class="btn">
+                <i class="bi bi-copy"></i>
+              </button>
+              <button class="btn">
+                <i class="bi bi-arrow-right-square"></i>
+              </button>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <button type="button" class="btn bg-purple text-white p-2">Сохранить</button>
+              <button type="button" class="btn btn-outline-purple text-white p-2">Сохранить и закрыть</button>
+            </div>
+          </div>
+          <div class="overflow-x-hidden">
+            <ul class="nav nav-tabs card-tabs ps-3" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a class="nav-link active" data-bs-toggle="tab" href="#baseTab" aria-selected="true"
+                  role="tab">Основное</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="#workTab" aria-selected="false" tabindex="-1"
+                  role="tab">Работа</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="#mtpTab" aria-selected="false" tabindex="-1"
+                  role="tab">MTP</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="#chatTab" aria-selected="false" tabindex="-1"
+                  role="tab">Чат (0)</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="#changeHistoryTab" aria-selected="false" tabindex="-1"
+                  role="tab">История изменений</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="#filesTab" aria-selected="false" tabindex="-1"
+                  role="tab">Файлы</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="#projectsTab" aria-selected="false" tabindex="-1"
+                  role="tab">Проекты</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="#tasksTab" aria-selected="false" tabindex="-1"
+                  role="tab">Задачи</a>
+              </li>
+            </ul>
+            <div id="tab-content-2" class="tab-content">
+              <div id="baseTab" class="tab-pane fade show active mt-4" role="tabpanel">
+                <div class="d-flex flex-column gap-3 px-3">
+                  <div class="d-flex align-items-center gap-4 w-100">
+                    <label for="tekh-maska" class="form-label text-end w-15">Название</label>
+                    <input type="text" value="" class="form-control w-100" id="inputValid" placeholder="Название карточки">
+                  </div>
+                  <div class="d-flex align-items-center gap-4 w-100 position-relative">
+                    <label for="tekh-maska" class="form-label text-end w-15">Тип*</label>
+                    <input type="text" value="" class="form-control w-100" id="inputValid" placeholder="Тип данных в карточке (выпадающий список)">
+                  </div>
+                  <div class="d-flex gap-4 w-100">
+                    <label for="exampleTextarea" class="form-label w-15 text-end">Заголовок</label>
+                    <textarea class="form-control w-100" id="exampleTextarea" rows="3" placeholder="Название" pl=""></textarea>
+                  </div>
+                  <div class="d-flex gap-4 w-100">
+                    <label for="exampleTextarea" class="form-label w-15 text-end">IsDemo</label>
+                    <div class="form-check form-switch w-100">
+                      <input class="form-check-input" type="checkbox" role="switch" id="utut">
+                    </div>
+                  </div>
+                  <div class="d-flex gap-4 w-100">
+                    <label for="exampleTextarea" class="form-label w-15 text-end">Дата</label>
+                    <div class="w-100">
+                      <input type="date" class="form-control w-25">
+                    </div>
+                  </div>
+                  <div class="d-flex gap-4 w-100">
+                    <label for="exampleTextarea" class="form-label w-15 text-end">Дата и время</label>
+                    <div class="d-flex gap-2 w-100">
+                      <input type="datetime-local" class="form-control w-25">
+                    </div>
+                  </div>
+                  <div class="d-flex gap-4 w-100">
+                    <label for="exampleTextarea" class="form-label w-15 text-end">Период дат</label>
+                    <div class="d-flex gap-3 w-100">
+                      <input type="date" class="form-control w-25">
+                      <input type="date" class="form-control w-25">
+                    </div>
+                  </div>
+                  <div class="d-flex gap-4 w-100">
+                    <label for="exampleTextarea" class="form-label w-15 text-end">Период</label>
+                    <div class="d-flex gap-3 w-100">
+                      <input type="datetime-local" class="form-control w-25">
+                      <input type="datetime-local" class="form-control w-25">
+                    </div>
+                  </div>
+                  <div class="d-flex gap-4 w-100">
+                    <label for="exampleTextarea" class="form-label w-15 text-end">Таблица</label>
+                    <div class="w-100 rounded border">
+  
+                      <div class="table-responsive">
+  
+                        <div class="grid-container-2">
+                          <!-- Header row A -->
+                          <div class="grid-item grid-header border-start"></div>
+                          <div class="grid-item grid-header">
+                            <div class="input-group">
+                              <span class="input-group-text">
+                                <i class="bi bi-search"></i>
+                              </span>
+                              <input type="search" class="form-control" aria-label="Search">
+                            </div>
+                          </div>
+                          <div class="grid-item grid-header">
+                            <div class="input-group">
+                              <span class="input-group-text">
+                                <i class="bi bi-search"></i>
+                              </span>
+                              <input type="search" class="form-control" aria-label="Search">
+                            </div>
+                          </div>
+                          <div class="grid-item grid-header">
+                            <div class="input-group">
+                              <span class="input-group-text">
+                                <i class="bi bi-search"></i>
+                              </span>
+                              <input type="search" class="form-control" aria-label="Search">
+                            </div>
+                          </div>
+                          <div class="grid-item grid-header">
+                            <div class="input-group">
+                              <span class="input-group-text">
+                                <i class="bi bi-search"></i>
+                              </span>
+                              <input type="search" class="form-control" aria-label="Search">
+                            </div>
+                          </div>
+              
+                          <!-- grid-header row B -->
+                          <div class="grid-item grid-header"></div>
+  
+                          <div class="grid-item grid-header">
+                            <div class="d-flex justify-content-center gap-2 align-items-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="id-check">
+                                <label class="form-check-label" for="id-check">ID</label>
+                              </div>
+                              <button class="btn link-secondary link-offset-2 link-underline-opacity-100-hover">
+                                <i class="bi bi-funnel-fill"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="grid-item grid-header">
+                            <div class="d-flex justify-content-center gap-2 align-items-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="id-check">
+                                <label class="form-check-label" for="id-check">Код проекта</label>
+                              </div>
+                              <button class="btn link-secondary link-offset-2 link-underline-opacity-100-hover">
+                                <i class="bi bi-funnel-fill"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="grid-item grid-header">
+                            <div class="d-flex justify-content-center gap-2 align-items-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="id-check">
+                                <label class="form-check-label" for="id-check">Стадия</label>
+                              </div>
+                              <button class="btn link-secondary link-offset-2 link-underline-opacity-100-hover">
+                                <i class="bi bi-funnel-fill"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="grid-item grid-header">
+                            <div class="d-flex justify-content-center gap-2 align-items-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="id-check">
+                                <label class="form-check-label" for="id-check">Руководитель проекта</label>
+                              </div>
+                              <button class="btn link-secondary link-offset-2 link-underline-opacity-100-hover">
+                                <i class="bi bi-funnel-fill"></i>
+                              </button>
+                            </div>
+                          </div>
+                          
+                        </div>
+  
+                        <ul id="tree-view-2" class="ui-sortable" style="--tree-sortable-depth: 30px;">
+                          <li class="tree-branch branch-level-1" data-id="1" data-parent="0" data-level="1"
+                            style="z-index: 6; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
+                            <div class="grid-container-2">
+  
+                              <div class="table-row-item">
+                                <div class="btn branch-drag-handler">
+                                  <i class="bi bi-grip-vertical"></i>
+                                </div>
+                              </div>
+  
+                              <div class="table-row-item">
+                                <div class="d-flex justify-content-start align-items-center checkbox-area">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="id-check-row-1">
+                                    <label class="form-check-label" for="id-check-row-1">111</label>
+                                  </div>
+                                </div>
+                              </div>
+  
+                              <div class="table-row-item">П-03.265</div>
+                              <div class="table-row-item">Перспектива</div>
+                              <div class="table-row-item">Иванов Иван Иванович</div>
+                            </div>
+                            <div class="children-bus"></div>
+                          </li>
+                          <li class="tree-branch branch-level-1" data-id="1" data-parent="0" data-level="1"
+                            style="z-index: 6; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
+                            <div class="grid-container-2">
+  
+                              <div class="table-row-item">
+                                <div class="btn branch-drag-handler">
+                                  <i class="bi bi-grip-vertical"></i>
+                                </div>
+                              </div>
+  
+                              <div class="table-row-item">
+                                <div class="d-flex justify-content-start align-items-center checkbox-area">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="id-check-row-1">
+                                    <label class="form-check-label" for="id-check-row-1">111</label>
+                                  </div>
+                                </div>
+                              </div>
+  
+                              <div class="table-row-item">П-03.265</div>
+                              <div class="table-row-item">Перспектива</div>
+                              <div class="table-row-item">Иванов Иван Иванович</div>
+                            </div>
+                            <div class="children-bus"></div>
+                          </li>
+                          <li class="tree-branch branch-level-1" data-id="1" data-parent="0" data-level="1"
+                            style="z-index: 6; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
+                            <div class="grid-container-2">
+  
+                              <div class="table-row-item">
+                                <div class="btn branch-drag-handler">
+                                  <i class="bi bi-grip-vertical"></i>
+                                </div>
+                              </div>
+  
+                              <div class="table-row-item">
+                                <div class="d-flex justify-content-start align-items-center checkbox-area">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="id-check-row-1">
+                                    <label class="form-check-label" for="id-check-row-1">111</label>
+                                  </div>
+                                </div>
+                              </div>
+  
+                              <div class="table-row-item">П-03.265</div>
+                              <div class="table-row-item">Перспектива</div>
+                              <div class="table-row-item">Иванов Иван Иванович</div>
+                            </div>
+                            <div class="children-bus"></div>
+                          </li>
+                          <li class="tree-branch branch-level-1" data-id="1" data-parent="0" data-level="1"
+                            style="z-index: 6; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
+                            <div class="grid-container-2">
+  
+                              <div class="table-row-item">
+                                <div class="btn branch-drag-handler">
+                                  <i class="bi bi-grip-vertical"></i>
+                                </div>
+                              </div>
+  
+                              <div class="table-row-item">
+                                <div class="d-flex justify-content-start align-items-center checkbox-area">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="id-check-row-1">
+                                    <label class="form-check-label" for="id-check-row-1">111</label>
+                                  </div>
+                                </div>
+                              </div>
+  
+                              <div class="table-row-item">П-03.265</div>
+                              <div class="table-row-item">Перспектива</div>
+                              <div class="table-row-item">Иванов Иван Иванович</div>
+                            </div>
+                            <div class="children-bus"></div>
+                          </li>
+                        </ul>
+  
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="workTab" class="tab-pane fade p-4" role="tabpanel"></div>
+              <div id="mtpTab" class="tab-pane fade p-4" role="tabpanel"></div>
+              <div id="chatTab" class="tab-pane fade p-4" role="tabpanel"></div>
+              <div id="changeHistoryTab" class="tab-pane fade p-4" role="tabpanel"></div>
+              <div id="filesTab" class="tab-pane fade p-4" role="tabpanel"></div>
+              <div id="projectsTab" class="tab-pane fade p-4" role="tabpanel"></div>
+              <div id="tasksTab" class="tab-pane fade p-4" role="tabpanel"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/jquery.js"></script>
   <script src="js/jquery-ui.min.js"></script>

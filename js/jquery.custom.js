@@ -3,14 +3,20 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
 
 $(document).ready(function () {
 
-  const leftTreeId = '#tree-view';
-  const leftSortable = new TreeSortable({
-    treeSelector: leftTreeId,
+  const treevew1Id = '#tree-view';
+  const treevew2Id = '#tree-view-2';
+  const treevew1 = new TreeSortable({
+    treeSelector: treevew1Id,
     maxLevel: 3
   });
-  leftSortable.run();
+  const treevew2 = new TreeSortable({
+    treeSelector: treevew2Id,
+    maxLevel: 3
+  });
+  treevew1.run();
+  treevew2.run();
 
-  leftSortable.onSortCompleted(async (event, ui) => {
+  treevew1.onSortCompleted(async (event, ui) => {
     const previous = ui.item[0].previousElementSibling
     if (
       (previous.classList.contains('branch-level-1') || previous.classList.contains('branch-level-2')) &&
@@ -92,43 +98,4 @@ $(document).ready(function () {
     }  
     return true;
   }
-
-
-  // document.querySelectorAll('.close-open').forEach(button => {
-  //   button.addEventListener('click', function () {
-  //     const currentLi = this.closest('li');
-  //     const parentUl = currentLi.parentElement;
-  //     const currentLevelClass = Array.from(currentLi.classList).find(className => className.startsWith('level-'));
-  //     let foundNextLevel = false;
-
-  //     for (let i = Array.from(parentUl.children).indexOf(currentLi) + 1; i < parentUl.children.length; i++) {
-  //       const siblingLi = parentUl.children[i];
-  //       if (siblingLi.classList.contains(currentLevelClass)) {
-  //         foundNextLevel = true;
-  //         break;
-  //       }
-  //       siblingLi.classList.toggle('hidden');
-  //     }
-  //   });
-  // });
-
-
-  //
-  // $('#js-sidebar-toogler').on('click', function(){
-  //   $('#js-sidebar').add('#js-layout').toggleClass('open')
-  // })
-
-  //
-  // $('.js-drop').on('click', function(e){
-  //   e.preventDefault();
-  //   if ($(this).hasClass('open')){
-  //     $(this).removeClass('open');
-  //     $(this).next('ul').slideUp(200);
-  //   } else{
-  //     $('.js-drop.open').next('ul').slideUp(200);
-  //     $('.js-drop.open').removeClass('open');
-  //     $(this).addClass('open');
-  //     $(this).next('ul').slideDown(200);
-  //   }   
-  // })
 });
