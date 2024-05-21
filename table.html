@@ -580,8 +580,8 @@
           <!-- Body rows -->
 
 
-          <ul id="tree-view" class="ui-sortable" style="--tree-sortable-depth: 30px;">
-            <li class="tree-branch branch-level-1" data-id="1" data-parent="0" data-level="1"
+          <ul id="tree-view-1" class="ui-sortable tree-view" style="--tree-sortable-depth: 30px;">
+            <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1"
               style="z-index: 6; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
               <div class="grid-container">
                 <div class="table-row-item">
@@ -606,7 +606,7 @@
               </div>
               <div class="children-bus"></div>
             </li>
-            <li class="tree-branch branch-level-1" data-id="1" data-parent="0" data-level="1"
+            <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1"
               style="z-index: 6; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
               <div class="grid-container">
                 <div class="table-row-item">
@@ -631,7 +631,7 @@
               </div>
               <div class="children-bus"></div>
             </li>
-            <li class="tree-branch branch-level-1" data-id="1" data-parent="0" data-level="1"
+            <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1"
               style="z-index: 6; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
               <div class="grid-container">
                 <div class="table-row-item">
@@ -656,7 +656,7 @@
               </div>
               <div class="children-bus"></div>
             </li>
-            <li class="tree-branch branch-level-1" data-id="1" data-parent="0" data-level="1"
+            <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1"
               style="z-index: 6; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
               <div class="grid-container">
                 <div class="table-row-item">
@@ -681,7 +681,7 @@
               </div>
               <div class="children-bus"></div>
             </li>
-            <li class="tree-branch branch-level-1" data-id="1" data-parent="0" data-level="1"
+            <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1"
               style="z-index: 6; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
               <div class="grid-container">
                 <div class="table-row-item">
@@ -706,7 +706,7 @@
               </div>
               <div class="children-bus"></div>
             </li>
-            <li class="tree-branch branch-level-1" data-id="1" data-parent="0" data-level="1"
+            <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1"
               style="z-index: 6; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
               <div class="grid-container">
                 <div class="table-row-item">
@@ -935,6 +935,354 @@
   </div>
 
   <!-- Modal --- Карточка  -->
+  <div class="modal fade" id="selectModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="selectModalalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content mw-100">
+        <div class="modal-header modal-bg">
+          <div class="d-flex align-items-center justify-content-between w-100">
+            <p class="m-0 text-white">Выбор</p>
+            <button type="button" class="btn-close btn-close-white close-select-modal" data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="modal-body p-0">
+          <div class="d-flex align-items-center justify-content-end gap-2 p-2">
+            <button type="button" class="btn btn-outline-purple text-white p-2">Выбрать и закрыть</button>
+          </div>
+
+          <div class="m-3 rounded border overflow-x-auto">
+
+
+            <div class="table-responsive">
+
+              <div class="grid-container">
+                <!-- Header row A -->
+                <div class="grid-item grid-header"></div>
+                <div class="grid-item grid-header">
+                  <div class="input-group">
+                    <span class="input-group-text">
+                      <i class="bi bi-search"></i>
+                    </span>
+                    <input type="search" class="form-control" aria-label="Search">
+                  </div>
+                </div>
+                <div class="grid-item grid-header">
+                  <div class="input-group">
+                    <span class="input-group-text">
+                      <i class="bi bi-search"></i>
+                    </span>
+                    <input type="search" class="form-control" aria-label="Search">
+                  </div>
+                </div>
+                <div class="grid-item grid-header">
+                  <div class="input-group">
+                    <span class="input-group-text">
+                      <i class="bi bi-search"></i>
+                    </span>
+                    <input type="search" class="form-control" aria-label="Search">
+                  </div>
+                </div>
+                <div class="grid-item grid-header">
+                  <div class="input-group">
+                    <span class="input-group-text">
+                      <i class="bi bi-search"></i>
+                    </span>
+                    <input type="search" class="form-control" aria-label="Search">
+                  </div>
+                </div>
+                <div class="grid-item grid-header">
+                  <div class="input-group date" data-provide="datepicker">
+                    <span class="input-group-text">
+                      <i class="bi bi-search"></i>
+                    </span>
+                    <input type="date" class="form-control">
+                  </div>
+                </div>
+                <div class="grid-item grid-header">
+                  <div class="input-group date" data-provide="datepicker">
+                    <span class="input-group-text">
+                      <i class="bi bi-search"></i>
+                    </span>
+                    <input type="date" class="form-control">
+                  </div>
+                </div>
+                <div class="grid-item grid-header">
+                  <div class="input-group">
+                    <span class="input-group-text">
+                      <i class="bi bi-search"></i>
+                    </span>
+                    <input type="search" class="form-control" aria-label="Search">
+                  </div>
+                </div>
+
+                <!-- grid-header row B -->
+                <div class="grid-item grid-header"></div>
+                <div class="grid-item grid-header">
+                  <div class="d-flex justify-content-center gap-2 align-items-center">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="id-check">
+                      <label class="form-check-label" for="id-check">ID</label>
+                    </div>
+                    <button class="btn link-secondary link-offset-2 link-underline-opacity-100-hover">
+                      <i class="bi bi-funnel-fill"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="grid-item grid-header">
+                  <div style="width: 13,57%;">
+                    <div class="d-flex justify-content-center gap-2 align-items-center">
+                      Дата завершения
+                      <button class="btn link-secondary link-offset-2 link-underline-opacity-100-hover">
+                        <i class="bi bi-funnel-fill"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid-item grid-header">
+                  <div style="width: 13,57%;">
+                    <div class="d-flex justify-content-center gap-2 align-items-center">
+                      Код проекта
+                      <button class="btn link-secondary link-offset-2 link-underline-opacity-100-hover">
+                        <i class="bi bi-funnel-fill"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid-item grid-header">
+                  <div style="width: 13,57%;">
+                    <div class="d-flex justify-content-center gap-2 align-items-center">
+                      Стадия
+                      <button class="btn link-secondary link-offset-2 link-underline-opacity-100-hover">
+                        <i class="bi bi-funnel-fill"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid-item grid-header">
+                  <div style="width: 13,57%;">
+                    <div class="d-flex justify-content-center gap-2 align-items-center">
+                      Дата завершения
+                      <button class="btn link-secondary link-offset-2 link-underline-opacity-100-hover">
+                        <i class="bi bi-funnel-fill"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid-item grid-header">
+                  <div style="width: 13,57%;">
+                    <div class="d-flex justify-content-center gap-2 align-items-center">
+                      Руководитель проекта
+                      <button class="btn link-secondary link-offset-2 link-underline-opacity-100-hover">
+                        <i class="bi bi-funnel-fill"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid-item grid-header">
+                  <div style="width: 13,57%;">
+                    <div class="d-flex justify-content-center gap-2 align-items-center">
+                      Дата начала
+                      <button class="btn link-secondary link-offset-2 link-underline-opacity-100-hover">
+                        <i class="bi bi-funnel-fill"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Body rows -->
+
+
+              <ul id="tree-view-2" class="ui-sortable tree-view" style="--tree-sortable-depth: 30px;">
+                <li class="tree-branch branch-level-1" data-id="1" data-parent="0" data-level="1"
+                  style="z-index: 6; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
+                  <div class="grid-container">
+                    <div class="table-row-item">
+                      <div class="btn branch-drag-handler">
+                        <i class="bi bi-grip-vertical"></i>
+                      </div>
+                    </div>
+                    <div class="table-row-item">
+                      <div class="d-flex justify-content-start align-items-center checkbox-area">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="id-check-row-1">
+                          <label class="form-check-label" for="id-check-row-1">111</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table-row-item">П-03.265</div>
+                    <div class="table-row-item">@Перспектива</div>
+                    <div class="table-row-item">Иванов Иван Иванович</div>
+                    <div class="table-row-item">21.04.2024</div>
+                    <div class="table-row-item">21.04.2024</div>
+                    <div class="table-row-item">Техническое обслуживание</div>
+                  </div>
+                  <div class="children-bus"></div>
+                </li>
+                <li class="tree-branch branch-level-1" data-id="1" data-parent="0" data-level="1"
+                  style="z-index: 6; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
+                  <div class="grid-container">
+                    <div class="table-row-item">
+                      <div class="btn branch-drag-handler">
+                        <i class="bi bi-grip-vertical"></i>
+                      </div>
+                    </div>
+                    <div class="table-row-item">
+                      <div class="d-flex justify-content-start align-items-center checkbox-area">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="id-check-row-1">
+                          <label class="form-check-label" for="id-check-row-1">222</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table-row-item">П-03.265</div>
+                    <div class="table-row-item">@Перспектива</div>
+                    <div class="table-row-item">Иванов Иван Иванович</div>
+                    <div class="table-row-item">21.04.2024</div>
+                    <div class="table-row-item">21.04.2024</div>
+                    <div class="table-row-item">Техническое обслуживание</div>
+                  </div>
+                  <div class="children-bus"></div>
+                </li>
+                <li class="tree-branch branch-level-1" data-id="1" data-parent="0" data-level="1"
+                  style="z-index: 6; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
+                  <div class="grid-container">
+                    <div class="table-row-item">
+                      <div class="btn branch-drag-handler">
+                        <i class="bi bi-grip-vertical"></i>
+                      </div>
+                    </div>
+                    <div class="table-row-item">
+                      <div class="d-flex justify-content-start align-items-center checkbox-area">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="id-check-row-1">
+                          <label class="form-check-label" for="id-check-row-1">333</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table-row-item">П-03.265</div>
+                    <div class="table-row-item">@Перспектива</div>
+                    <div class="table-row-item">Иванов Иван Иванович</div>
+                    <div class="table-row-item">21.04.2024</div>
+                    <div class="table-row-item">21.04.2024</div>
+                    <div class="table-row-item">Техническое обслуживание</div>
+                  </div>
+                  <div class="children-bus"></div>
+                </li>
+                <li class="tree-branch branch-level-1" data-id="1" data-parent="0" data-level="1"
+                  style="z-index: 6; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
+                  <div class="grid-container">
+                    <div class="table-row-item">
+                      <div class="btn branch-drag-handler">
+                        <i class="bi bi-grip-vertical"></i>
+                      </div>
+                    </div>
+                    <div class="table-row-item">
+                      <div class="d-flex justify-content-start align-items-center checkbox-area">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="id-check-row-1">
+                          <label class="form-check-label" for="id-check-row-1">444</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table-row-item">П-03.265</div>
+                    <div class="table-row-item">@Перспектива</div>
+                    <div class="table-row-item">Иванов Иван Иванович</div>
+                    <div class="table-row-item">21.04.2024</div>
+                    <div class="table-row-item">21.04.2024</div>
+                    <div class="table-row-item">Техническое обслуживание</div>
+                  </div>
+                  <div class="children-bus"></div>
+                </li>
+                <li class="tree-branch branch-level-1" data-id="1" data-parent="0" data-level="1"
+                  style="z-index: 6; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
+                  <div class="grid-container">
+                    <div class="table-row-item">
+                      <div class="btn branch-drag-handler">
+                        <i class="bi bi-grip-vertical"></i>
+                      </div>
+                    </div>
+                    <div class="table-row-item">
+                      <div class="d-flex justify-content-start align-items-center checkbox-area">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="id-check-row-1">
+                          <label class="form-check-label" for="id-check-row-1">555</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table-row-item">П-03.265</div>
+                    <div class="table-row-item">@Перспектива</div>
+                    <div class="table-row-item">Иванов Иван Иванович</div>
+                    <div class="table-row-item">21.04.2024</div>
+                    <div class="table-row-item">21.04.2024</div>
+                    <div class="table-row-item">Техническое обслуживание</div>
+                  </div>
+                  <div class="children-bus"></div>
+                </li>
+                <li class="tree-branch branch-level-1" data-id="1" data-parent="0" data-level="1"
+                  style="z-index: 6; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
+                  <div class="grid-container">
+                    <div class="table-row-item">
+                      <div class="btn branch-drag-handler">
+                        <i class="bi bi-grip-vertical"></i>
+                      </div>
+                    </div>
+                    <div class="table-row-item">
+                      <div class="d-flex justify-content-start align-items-center checkbox-area">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="id-check-row-1">
+                          <label class="form-check-label" for="id-check-row-1">666</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table-row-item">П-03.265</div>
+                    <div class="table-row-item">@Перспектива</div>
+                    <div class="table-row-item">Иванов Иван Иванович</div>
+                    <div class="table-row-item">21.04.2024</div>
+                    <div class="table-row-item">21.04.2024</div>
+                    <div class="table-row-item">Техническое обслуживание</div>
+                  </div>
+                  <div class="children-bus"></div>
+                </li>
+              </ul>
+
+            </div>
+            <div class="d-flex justify-content-between align-items-center gap-3 main-table-footer p-2">
+              <nav class="d-inline-flex gap-1">
+                <button class="btn btn-light">100</button>
+                <button class="btn btn-light">200</button>
+                <button class="btn btn-dark">500</button>
+                <button class="btn btn-light">1 000</button>
+              </nav>
+              <div class="counter"><small>Всего объектов: 462</small></div>
+              <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span aria-hidden="true">«</span>
+                    </a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span aria-hidden="true">»</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal --- Карточка  -->
   <div class="modal fade" id="cardModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="cardModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">
@@ -1009,15 +1357,32 @@
                 <div class="d-flex flex-column gap-3 px-3">
                   <div class="d-flex align-items-center gap-4 w-100">
                     <label for="tekh-maska" class="form-label text-end w-15">Название</label>
-                    <input type="text" value="" class="form-control w-100" id="inputValid" placeholder="Название карточки">
+                    <input type="text" value="" class="form-control w-100" id="inputValid"
+                      placeholder="Название карточки">
                   </div>
                   <div class="d-flex align-items-center gap-4 w-100 position-relative">
                     <label for="tekh-maska" class="form-label text-end w-15">Тип*</label>
-                    <input type="text" value="" class="form-control w-100" id="inputValid" placeholder="Тип данных в карточке (выпадающий список)">
+                    <div class="type-dropdown-container w-100">
+                      <input type="text" class="type-dropdown-input form-control w-100" placeholder="Select an item"
+                        readonly>
+                      <div class="type-icons">
+                        <i class="bi bi-pen"></i>
+                        <i class="bi bi-list h5" id="open-select-modal"></i>
+                        <i class="btn-close type-icon-clear"></i>
+                      </div>
+                      <div class="type-dropdown-list">
+                        <div class="type-dropdown-item">Item 1</div>
+                        <div class="type-dropdown-item">Item 2</div>
+                        <div class="type-dropdown-item">Item 3</div>
+                        <div class="type-dropdown-item">Item 4</div>
+                      </div>
+                    </div>
+                    <!-- <input type="text" value="" class="form-control w-100" id="inputValid" placeholder="Тип данных в карточке (выпадающий список)"> -->
                   </div>
                   <div class="d-flex gap-4 w-100">
                     <label for="exampleTextarea" class="form-label w-15 text-end">Заголовок</label>
-                    <textarea class="form-control w-100" id="exampleTextarea" rows="3" placeholder="Название" pl=""></textarea>
+                    <textarea class="form-control w-100" id="exampleTextarea" rows="3" placeholder="Название"
+                      pl=""></textarea>
                   </div>
                   <div class="d-flex gap-4 w-100">
                     <label for="exampleTextarea" class="form-label w-15 text-end">IsDemo</label>
@@ -1053,13 +1418,56 @@
                   </div>
                   <div class="d-flex gap-4 w-100">
                     <label for="exampleTextarea" class="form-label w-15 text-end">Таблица</label>
-                    <div class="w-100 rounded border">
-  
+                    <div class="w-85 rounded border overflow-x-auto">
+
+                      <div class="d-flex justify-content-start align-items-center gap-3">
+                        <div class="btn-group tools" role="group" aria-label="Basic example">
+                          <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                            <i class="bi bi-folder-plus"></i>
+                          </button>
+                          <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                            <i class="bi bi-plus-circle"></i>
+                          </button>
+                          <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                            <i class="bi bi-copy"></i>
+                          </button>
+                          <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                            <i class="bi bi-pen"></i>
+                          </button>
+                          <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                            <i class="bi bi-eye"></i>
+                          </button>
+                          <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                            <i class="bi bi-trash3"></i>
+                          </button>
+                          <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                            <i class="bi bi-arrow-repeat"></i>
+                          </button>
+                          <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                            <i class="bi bi-download"></i>
+                          </button>
+                          <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                            <i class="bi bi-upload"></i>
+                          </button>
+                          <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                            <i class="bi bi-gear"></i>
+                          </button>
+                          <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                            <i class="bi bi-list-ul"></i>
+                          </button>
+                        </div>
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" role="switch" id="delete-switcher">
+                        </div>
+                        <button class="btn link-secondary link-offset-2 link-underline-opacity-100-hover">
+                          <i class="bi bi-funnel-fill"></i>
+                        </button>
+                      </div>
                       <div class="table-responsive">
-  
-                        <div class="grid-container-2">
+
+                        <div class="grid-container">
                           <!-- Header row A -->
-                          <div class="grid-item grid-header border-start"></div>
+                          <div class="grid-item grid-header"></div>
                           <div class="grid-item grid-header">
                             <div class="input-group">
                               <span class="input-group-text">
@@ -1082,6 +1490,30 @@
                                 <i class="bi bi-search"></i>
                               </span>
                               <input type="search" class="form-control" aria-label="Search">
+                            </div>
+                          </div>
+                          <div class="grid-item grid-header">
+                            <div class="input-group">
+                              <span class="input-group-text">
+                                <i class="bi bi-search"></i>
+                              </span>
+                              <input type="search" class="form-control" aria-label="Search">
+                            </div>
+                          </div>
+                          <div class="grid-item grid-header">
+                            <div class="input-group date" data-provide="datepicker">
+                              <span class="input-group-text">
+                                <i class="bi bi-search"></i>
+                              </span>
+                              <input type="date" class="form-control">
+                            </div>
+                          </div>
+                          <div class="grid-item grid-header">
+                            <div class="input-group date" data-provide="datepicker">
+                              <span class="input-group-text">
+                                <i class="bi bi-search"></i>
+                              </span>
+                              <input type="date" class="form-control">
                             </div>
                           </div>
                           <div class="grid-item grid-header">
@@ -1095,7 +1527,6 @@
               
                           <!-- grid-header row B -->
                           <div class="grid-item grid-header"></div>
-  
                           <div class="grid-item grid-header">
                             <div class="d-flex justify-content-center gap-2 align-items-center">
                               <div class="form-check">
@@ -1108,52 +1539,77 @@
                             </div>
                           </div>
                           <div class="grid-item grid-header">
-                            <div class="d-flex justify-content-center gap-2 align-items-center">
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="id-check">
-                                <label class="form-check-label" for="id-check">Код проекта</label>
+                            <div style="width: 13,57%;">
+                              <div class="d-flex justify-content-center gap-2 align-items-center">
+                                Дата завершения
+                                <button class="btn link-secondary link-offset-2 link-underline-opacity-100-hover">
+                                  <i class="bi bi-funnel-fill"></i>
+                                </button>
                               </div>
-                              <button class="btn link-secondary link-offset-2 link-underline-opacity-100-hover">
-                                <i class="bi bi-funnel-fill"></i>
-                              </button>
                             </div>
                           </div>
                           <div class="grid-item grid-header">
-                            <div class="d-flex justify-content-center gap-2 align-items-center">
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="id-check">
-                                <label class="form-check-label" for="id-check">Стадия</label>
+                            <div style="width: 13,57%;">
+                              <div class="d-flex justify-content-center gap-2 align-items-center">
+                                Код проекта
+                                <button class="btn link-secondary link-offset-2 link-underline-opacity-100-hover">
+                                  <i class="bi bi-funnel-fill"></i>
+                                </button>
                               </div>
-                              <button class="btn link-secondary link-offset-2 link-underline-opacity-100-hover">
-                                <i class="bi bi-funnel-fill"></i>
-                              </button>
                             </div>
                           </div>
                           <div class="grid-item grid-header">
-                            <div class="d-flex justify-content-center gap-2 align-items-center">
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="id-check">
-                                <label class="form-check-label" for="id-check">Руководитель проекта</label>
+                            <div style="width: 13,57%;">
+                              <div class="d-flex justify-content-center gap-2 align-items-center">
+                                Стадия
+                                <button class="btn link-secondary link-offset-2 link-underline-opacity-100-hover">
+                                  <i class="bi bi-funnel-fill"></i>
+                                </button>
                               </div>
-                              <button class="btn link-secondary link-offset-2 link-underline-opacity-100-hover">
-                                <i class="bi bi-funnel-fill"></i>
-                              </button>
                             </div>
                           </div>
-                          
+                          <div class="grid-item grid-header">
+                            <div style="width: 13,57%;">
+                              <div class="d-flex justify-content-center gap-2 align-items-center">
+                                Дата завершения
+                                <button class="btn link-secondary link-offset-2 link-underline-opacity-100-hover">
+                                  <i class="bi bi-funnel-fill"></i>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="grid-item grid-header">
+                            <div style="width: 13,57%;">
+                              <div class="d-flex justify-content-center gap-2 align-items-center">
+                                Руководитель проекта
+                                <button class="btn link-secondary link-offset-2 link-underline-opacity-100-hover">
+                                  <i class="bi bi-funnel-fill"></i>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="grid-item grid-header">
+                            <div style="width: 13,57%;">
+                              <div class="d-flex justify-content-center gap-2 align-items-center">
+                                Дата начала
+                                <button class="btn link-secondary link-offset-2 link-underline-opacity-100-hover">
+                                  <i class="bi bi-funnel-fill"></i>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-  
-                        <ul id="tree-view-2" class="ui-sortable" style="--tree-sortable-depth: 30px;">
-                          <li class="tree-branch branch-level-1" data-id="1" data-parent="0" data-level="1"
-                            style="z-index: 6; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
-                            <div class="grid-container-2">
-  
+                        <!-- Body rows -->
+              
+              
+                        <ul id="tree-view-3" class="ui-sortable tree-view" style="--tree-sortable-depth: 30px;">
+                          <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1" style="z-index: 6; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
+                            <div class="grid-container">
                               <div class="table-row-item">
-                                <div class="btn branch-drag-handler">
+                                <div class="btn branch-drag-handler ui-sortable-handle">
                                   <i class="bi bi-grip-vertical"></i>
                                 </div>
                               </div>
-  
                               <div class="table-row-item">
                                 <div class="d-flex justify-content-start align-items-center checkbox-area">
                                   <div class="form-check">
@@ -1162,92 +1618,167 @@
                                   </div>
                                 </div>
                               </div>
-  
                               <div class="table-row-item">П-03.265</div>
-                              <div class="table-row-item">Перспектива</div>
+                              <div class="table-row-item">@Перспектива</div>
                               <div class="table-row-item">Иванов Иван Иванович</div>
+                              <div class="table-row-item">21.04.2024</div>
+                              <div class="table-row-item">21.04.2024</div>
+                              <div class="table-row-item">Техническое обслуживание</div>
                             </div>
                             <div class="children-bus"></div>
                           </li>
-                          <li class="tree-branch branch-level-1" data-id="1" data-parent="0" data-level="1"
-                            style="z-index: 6; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
-                            <div class="grid-container-2">
-  
+                          <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1" style="z-index: 5; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
+                            <div class="grid-container">
                               <div class="table-row-item">
-                                <div class="btn branch-drag-handler">
+                                <div class="btn branch-drag-handler ui-sortable-handle">
                                   <i class="bi bi-grip-vertical"></i>
                                 </div>
                               </div>
-  
                               <div class="table-row-item">
                                 <div class="d-flex justify-content-start align-items-center checkbox-area">
                                   <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="id-check-row-1">
-                                    <label class="form-check-label" for="id-check-row-1">111</label>
+                                    <label class="form-check-label" for="id-check-row-1">222</label>
                                   </div>
                                 </div>
                               </div>
-  
                               <div class="table-row-item">П-03.265</div>
-                              <div class="table-row-item">Перспектива</div>
+                              <div class="table-row-item">@Перспектива</div>
                               <div class="table-row-item">Иванов Иван Иванович</div>
+                              <div class="table-row-item">21.04.2024</div>
+                              <div class="table-row-item">21.04.2024</div>
+                              <div class="table-row-item">Техническое обслуживание</div>
                             </div>
                             <div class="children-bus"></div>
                           </li>
-                          <li class="tree-branch branch-level-1" data-id="1" data-parent="0" data-level="1"
-                            style="z-index: 6; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
-                            <div class="grid-container-2">
-  
+                          <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1" style="z-index: 4; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
+                            <div class="grid-container">
                               <div class="table-row-item">
-                                <div class="btn branch-drag-handler">
+                                <div class="btn branch-drag-handler ui-sortable-handle">
                                   <i class="bi bi-grip-vertical"></i>
                                 </div>
                               </div>
-  
                               <div class="table-row-item">
                                 <div class="d-flex justify-content-start align-items-center checkbox-area">
                                   <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="id-check-row-1">
-                                    <label class="form-check-label" for="id-check-row-1">111</label>
+                                    <label class="form-check-label" for="id-check-row-1">333</label>
                                   </div>
                                 </div>
                               </div>
-  
                               <div class="table-row-item">П-03.265</div>
-                              <div class="table-row-item">Перспектива</div>
+                              <div class="table-row-item">@Перспектива</div>
                               <div class="table-row-item">Иванов Иван Иванович</div>
+                              <div class="table-row-item">21.04.2024</div>
+                              <div class="table-row-item">21.04.2024</div>
+                              <div class="table-row-item">Техническое обслуживание</div>
                             </div>
                             <div class="children-bus"></div>
                           </li>
-                          <li class="tree-branch branch-level-1" data-id="1" data-parent="0" data-level="1"
-                            style="z-index: 6; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
-                            <div class="grid-container-2">
-  
+                          <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1" style="z-index: 3; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
+                            <div class="grid-container">
                               <div class="table-row-item">
-                                <div class="btn branch-drag-handler">
+                                <div class="btn branch-drag-handler ui-sortable-handle">
                                   <i class="bi bi-grip-vertical"></i>
                                 </div>
                               </div>
-  
                               <div class="table-row-item">
                                 <div class="d-flex justify-content-start align-items-center checkbox-area">
                                   <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="id-check-row-1">
-                                    <label class="form-check-label" for="id-check-row-1">111</label>
+                                    <label class="form-check-label" for="id-check-row-1">444</label>
                                   </div>
                                 </div>
                               </div>
-  
                               <div class="table-row-item">П-03.265</div>
-                              <div class="table-row-item">Перспектива</div>
+                              <div class="table-row-item">@Перспектива</div>
                               <div class="table-row-item">Иванов Иван Иванович</div>
+                              <div class="table-row-item">21.04.2024</div>
+                              <div class="table-row-item">21.04.2024</div>
+                              <div class="table-row-item">Техническое обслуживание</div>
+                            </div>
+                            <div class="children-bus"></div>
+                          </li>
+                          <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1" style="z-index: 2; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
+                            <div class="grid-container">
+                              <div class="table-row-item">
+                                <div class="btn branch-drag-handler ui-sortable-handle">
+                                  <i class="bi bi-grip-vertical"></i>
+                                </div>
+                              </div>
+                              <div class="table-row-item">
+                                <div class="d-flex justify-content-start align-items-center checkbox-area">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="id-check-row-1">
+                                    <label class="form-check-label" for="id-check-row-1">555</label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="table-row-item">П-03.265</div>
+                              <div class="table-row-item">@Перспектива</div>
+                              <div class="table-row-item">Иванов Иван Иванович</div>
+                              <div class="table-row-item">21.04.2024</div>
+                              <div class="table-row-item">21.04.2024</div>
+                              <div class="table-row-item">Техническое обслуживание</div>
+                            </div>
+                            <div class="children-bus"></div>
+                          </li>
+                          <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1" style="z-index: 1; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
+                            <div class="grid-container">
+                              <div class="table-row-item">
+                                <div class="btn branch-drag-handler ui-sortable-handle">
+                                  <i class="bi bi-grip-vertical"></i>
+                                </div>
+                              </div>
+                              <div class="table-row-item">
+                                <div class="d-flex justify-content-start align-items-center checkbox-area">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="id-check-row-1">
+                                    <label class="form-check-label" for="id-check-row-1">666</label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="table-row-item">П-03.265</div>
+                              <div class="table-row-item">@Перспектива</div>
+                              <div class="table-row-item">Иванов Иван Иванович</div>
+                              <div class="table-row-item">21.04.2024</div>
+                              <div class="table-row-item">21.04.2024</div>
+                              <div class="table-row-item">Техническое обслуживание</div>
                             </div>
                             <div class="children-bus"></div>
                           </li>
                         </ul>
-  
+              
+              
                       </div>
-                      
+
+                      <div class="d-flex justify-content-between align-items-center gap-3 main-table-footer p-2">
+                        <nav class="d-inline-flex gap-1">
+                          <button class="btn btn-light">100</button>
+                          <button class="btn btn-light">200</button>
+                          <button class="btn btn-dark">500</button>
+                          <button class="btn btn-light">1 000</button>
+                        </nav>
+                        <div class="counter"><small>Всего объектов: 462</small></div>
+                        <nav aria-label="Page navigation example">
+                          <ul class="pagination">
+                            <li class="page-item">
+                              <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">«</span>
+                              </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                              <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">»</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </nav>
+                      </div>
+
                     </div>
                   </div>
                 </div>
@@ -1259,6 +1790,456 @@
               <div id="filesTab" class="tab-pane fade p-4" role="tabpanel"></div>
               <div id="projectsTab" class="tab-pane fade p-4" role="tabpanel"></div>
               <div id="tasksTab" class="tab-pane fade p-4" role="tabpanel"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal --- Item Карточка  -->
+  <div class="modal fade" id="cardItemModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="cardItemModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content mw-100">
+        <div class="modal-header modal-bg">
+          <div class="d-flex align-items-center justify-content-between w-100">
+            <p class="m-0 text-white">Карточка</p>
+            <button type="button" class="btn-close btn-close-white close-cart-item-modal" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="modal-body p-0">
+          <div class="d-flex align-items-center justify-content-between p-3">
+            <div class="d-flex gap-0 align-items-center">
+              <button class="btn">
+                <i class="bi bi-arrow-repeat"></i>
+              </button>
+              <button class="btn">
+                <i class="bi bi-nut"></i>
+              </button>
+              <button class="btn">
+                <i class="bi bi-code-slash"></i>
+              </button>
+              <button class="btn">
+                <i class="bi bi-copy"></i>
+              </button>
+              <button class="btn">
+                <i class="bi bi-arrow-right-square"></i>
+              </button>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <button type="button" class="btn bg-purple text-white p-2">Сохранить</button>
+              <button type="button" class="btn btn-outline-purple text-white p-2">Сохранить и закрыть</button>
+            </div>
+          </div>
+          <div class="overflow-x-hidden">
+            <ul class="nav nav-tabs card-tabs ps-3" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a class="nav-link active" data-bs-toggle="tab" href="#baseTab2" aria-selected="true"
+                  role="tab">Основное</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="#workTab2" aria-selected="false" tabindex="-1"
+                  role="tab">Работа</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="#mtpTab2" aria-selected="false" tabindex="-1"
+                  role="tab">MTP</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="#chatTab2" aria-selected="false" tabindex="-1"
+                  role="tab">Чат (0)</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="#changeHistoryTab2" aria-selected="false" tabindex="-1"
+                  role="tab">История изменений</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="#filesTab2" aria-selected="false" tabindex="-1"
+                  role="tab">Файлы</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="#projectsTab2" aria-selected="false" tabindex="-1"
+                  role="tab">Проекты</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="#tasksTab" aria-selected="false" tabindex="-1"
+                  role="tab">Задачи</a>
+              </li>
+            </ul>
+            <div id="tab-content-2" class="tab-content">
+              <div id="baseTab2" class="tab-pane fade show active mt-4" role="tabpanel">
+
+                <div class="rounded border overflow-x-auto m-2">
+
+                  <div class="table-responsive">
+                    <div class="d-flex justify-content-start align-items-center gap-3">
+                      <div class="btn-group tools" role="group" aria-label="Basic example">
+                        <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                          <i class="bi bi-folder-plus"></i>
+                        </button>
+                        <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                          <i class="bi bi-plus-circle"></i>
+                        </button>
+                        <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                          <i class="bi bi-copy"></i>
+                        </button>
+                        <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                          <i class="bi bi-pen"></i>
+                        </button>
+                        <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                          <i class="bi bi-eye"></i>
+                        </button>
+                        <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                          <i class="bi bi-trash3"></i>
+                        </button>
+                        <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                          <i class="bi bi-arrow-repeat"></i>
+                        </button>
+                        <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                          <i class="bi bi-download"></i>
+                        </button>
+                        <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                          <i class="bi bi-upload"></i>
+                        </button>
+                        <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                          <i class="bi bi-gear"></i>
+                        </button>
+                        <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                          <i class="bi bi-list-ul"></i>
+                        </button>
+                      </div>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="delete-switcher">
+                      </div>
+                      <button class="btn link-secondary link-offset-2 link-underline-opacity-100-hover">
+                        <i class="bi bi-funnel-fill"></i>
+                      </button>
+                    </div>
+
+                    <div class="grid-container">
+                      <!-- Header row A -->
+                      <div class="grid-item grid-header"></div>
+                      <div class="grid-item grid-header">
+                        <div class="input-group">
+                          <span class="input-group-text">
+                            <i class="bi bi-search"></i>
+                          </span>
+                          <input type="search" class="form-control" aria-label="Search">
+                        </div>
+                      </div>
+                      <div class="grid-item grid-header">
+                        <div class="input-group">
+                          <span class="input-group-text">
+                            <i class="bi bi-search"></i>
+                          </span>
+                          <input type="search" class="form-control" aria-label="Search">
+                        </div>
+                      </div>
+                      <div class="grid-item grid-header">
+                        <div class="input-group">
+                          <span class="input-group-text">
+                            <i class="bi bi-search"></i>
+                          </span>
+                          <input type="search" class="form-control" aria-label="Search">
+                        </div>
+                      </div>
+                      <div class="grid-item grid-header">
+                        <div class="input-group">
+                          <span class="input-group-text">
+                            <i class="bi bi-search"></i>
+                          </span>
+                          <input type="search" class="form-control" aria-label="Search">
+                        </div>
+                      </div>
+                      <div class="grid-item grid-header">
+                        <div class="input-group date" data-provide="datepicker">
+                          <span class="input-group-text">
+                            <i class="bi bi-search"></i>
+                          </span>
+                          <input type="date" class="form-control">
+                        </div>
+                      </div>
+                      <div class="grid-item grid-header">
+                        <div class="input-group date" data-provide="datepicker">
+                          <span class="input-group-text">
+                            <i class="bi bi-search"></i>
+                          </span>
+                          <input type="date" class="form-control">
+                        </div>
+                      </div>
+                      <div class="grid-item grid-header">
+                        <div class="input-group">
+                          <span class="input-group-text">
+                            <i class="bi bi-search"></i>
+                          </span>
+                          <input type="search" class="form-control" aria-label="Search">
+                        </div>
+                      </div>
+          
+                      <!-- grid-header row B -->
+                      <div class="grid-item grid-header"></div>
+                      <div class="grid-item grid-header">
+                        <div class="d-flex justify-content-center gap-2 align-items-center">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="id-check">
+                            <label class="form-check-label" for="id-check">ID</label>
+                          </div>
+                          <button class="btn link-secondary link-offset-2 link-underline-opacity-100-hover">
+                            <i class="bi bi-funnel-fill"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="grid-item grid-header">
+                        <div style="width: 13,57%;">
+                          <div class="d-flex justify-content-center gap-2 align-items-center">
+                            Дата завершения
+                            <button class="btn link-secondary link-offset-2 link-underline-opacity-100-hover">
+                              <i class="bi bi-funnel-fill"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="grid-item grid-header">
+                        <div style="width: 13,57%;">
+                          <div class="d-flex justify-content-center gap-2 align-items-center">
+                            Код проекта
+                            <button class="btn link-secondary link-offset-2 link-underline-opacity-100-hover">
+                              <i class="bi bi-funnel-fill"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="grid-item grid-header">
+                        <div style="width: 13,57%;">
+                          <div class="d-flex justify-content-center gap-2 align-items-center">
+                            Стадия
+                            <button class="btn link-secondary link-offset-2 link-underline-opacity-100-hover">
+                              <i class="bi bi-funnel-fill"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="grid-item grid-header">
+                        <div style="width: 13,57%;">
+                          <div class="d-flex justify-content-center gap-2 align-items-center">
+                            Дата завершения
+                            <button class="btn link-secondary link-offset-2 link-underline-opacity-100-hover">
+                              <i class="bi bi-funnel-fill"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="grid-item grid-header">
+                        <div style="width: 13,57%;">
+                          <div class="d-flex justify-content-center gap-2 align-items-center">
+                            Руководитель проекта
+                            <button class="btn link-secondary link-offset-2 link-underline-opacity-100-hover">
+                              <i class="bi bi-funnel-fill"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="grid-item grid-header">
+                        <div style="width: 13,57%;">
+                          <div class="d-flex justify-content-center gap-2 align-items-center">
+                            Дата начала
+                            <button class="btn link-secondary link-offset-2 link-underline-opacity-100-hover">
+                              <i class="bi bi-funnel-fill"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Body rows -->
+          
+          
+                    <ul id="tree-view-4" class="ui-sortable tree-view" style="--tree-sortable-depth: 30px;">
+                      <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1" style="z-index: 6; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
+                        <div class="grid-container">
+                          <div class="table-row-item">
+                            <div class="btn branch-drag-handler ui-sortable-handle">
+                              <i class="bi bi-grip-vertical"></i>
+                            </div>
+                          </div>
+                          <div class="table-row-item">
+                            <div class="d-flex justify-content-start align-items-center checkbox-area">
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="id-check-row-1">
+                                <label class="form-check-label" for="id-check-row-1">111</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="table-row-item">П-03.265</div>
+                          <div class="table-row-item">@Перспектива</div>
+                          <div class="table-row-item">Иванов Иван Иванович</div>
+                          <div class="table-row-item">21.04.2024</div>
+                          <div class="table-row-item">21.04.2024</div>
+                          <div class="table-row-item">Техническое обслуживание</div>
+                        </div>
+                        <div class="children-bus"></div>
+                      </li>
+                      <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1" style="z-index: 5; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
+                        <div class="grid-container">
+                          <div class="table-row-item">
+                            <div class="btn branch-drag-handler ui-sortable-handle">
+                              <i class="bi bi-grip-vertical"></i>
+                            </div>
+                          </div>
+                          <div class="table-row-item">
+                            <div class="d-flex justify-content-start align-items-center checkbox-area">
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="id-check-row-1">
+                                <label class="form-check-label" for="id-check-row-1">222</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="table-row-item">П-03.265</div>
+                          <div class="table-row-item">@Перспектива</div>
+                          <div class="table-row-item">Иванов Иван Иванович</div>
+                          <div class="table-row-item">21.04.2024</div>
+                          <div class="table-row-item">21.04.2024</div>
+                          <div class="table-row-item">Техническое обслуживание</div>
+                        </div>
+                        <div class="children-bus"></div>
+                      </li>
+                      <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1" style="z-index: 4; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
+                        <div class="grid-container">
+                          <div class="table-row-item">
+                            <div class="btn branch-drag-handler ui-sortable-handle">
+                              <i class="bi bi-grip-vertical"></i>
+                            </div>
+                          </div>
+                          <div class="table-row-item">
+                            <div class="d-flex justify-content-start align-items-center checkbox-area">
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="id-check-row-1">
+                                <label class="form-check-label" for="id-check-row-1">333</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="table-row-item">П-03.265</div>
+                          <div class="table-row-item">@Перспектива</div>
+                          <div class="table-row-item">Иванов Иван Иванович</div>
+                          <div class="table-row-item">21.04.2024</div>
+                          <div class="table-row-item">21.04.2024</div>
+                          <div class="table-row-item">Техническое обслуживание</div>
+                        </div>
+                        <div class="children-bus"></div>
+                      </li>
+                      <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1" style="z-index: 3; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
+                        <div class="grid-container">
+                          <div class="table-row-item">
+                            <div class="btn branch-drag-handler ui-sortable-handle">
+                              <i class="bi bi-grip-vertical"></i>
+                            </div>
+                          </div>
+                          <div class="table-row-item">
+                            <div class="d-flex justify-content-start align-items-center checkbox-area">
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="id-check-row-1">
+                                <label class="form-check-label" for="id-check-row-1">444</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="table-row-item">П-03.265</div>
+                          <div class="table-row-item">@Перспектива</div>
+                          <div class="table-row-item">Иванов Иван Иванович</div>
+                          <div class="table-row-item">21.04.2024</div>
+                          <div class="table-row-item">21.04.2024</div>
+                          <div class="table-row-item">Техническое обслуживание</div>
+                        </div>
+                        <div class="children-bus"></div>
+                      </li>
+                      <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1" style="z-index: 2; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
+                        <div class="grid-container">
+                          <div class="table-row-item">
+                            <div class="btn branch-drag-handler ui-sortable-handle">
+                              <i class="bi bi-grip-vertical"></i>
+                            </div>
+                          </div>
+                          <div class="table-row-item">
+                            <div class="d-flex justify-content-start align-items-center checkbox-area">
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="id-check-row-1">
+                                <label class="form-check-label" for="id-check-row-1">555</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="table-row-item">П-03.265</div>
+                          <div class="table-row-item">@Перспектива</div>
+                          <div class="table-row-item">Иванов Иван Иванович</div>
+                          <div class="table-row-item">21.04.2024</div>
+                          <div class="table-row-item">21.04.2024</div>
+                          <div class="table-row-item">Техническое обслуживание</div>
+                        </div>
+                        <div class="children-bus"></div>
+                      </li>
+                      <li class="tree-branch branch-level-1 main-table-row" data-id="1" data-parent="0" data-level="1" style="z-index: 1; --tree-sortable-branch-left-shift: 0px; --tree-sortable-children-left-shift: -0px; margin-top: 0px; position: relative; left: 0px; top: 0px;">
+                        <div class="grid-container">
+                          <div class="table-row-item">
+                            <div class="btn branch-drag-handler ui-sortable-handle">
+                              <i class="bi bi-grip-vertical"></i>
+                            </div>
+                          </div>
+                          <div class="table-row-item">
+                            <div class="d-flex justify-content-start align-items-center checkbox-area">
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="id-check-row-1">
+                                <label class="form-check-label" for="id-check-row-1">666</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="table-row-item">П-03.265</div>
+                          <div class="table-row-item">@Перспектива</div>
+                          <div class="table-row-item">Иванов Иван Иванович</div>
+                          <div class="table-row-item">21.04.2024</div>
+                          <div class="table-row-item">21.04.2024</div>
+                          <div class="table-row-item">Техническое обслуживание</div>
+                        </div>
+                        <div class="children-bus"></div>
+                      </li>
+                    </ul>
+          
+          
+                  </div>
+
+                  <div class="d-flex justify-content-between align-items-center gap-3 main-table-footer p-2">
+                    <nav class="d-inline-flex gap-1">
+                      <button class="btn btn-light">100</button>
+                      <button class="btn btn-light">200</button>
+                      <button class="btn btn-dark">500</button>
+                      <button class="btn btn-light">1 000</button>
+                    </nav>
+                    <div class="counter"><small>Всего объектов: 462</small></div>
+                    <nav aria-label="Page navigation example">
+                      <ul class="pagination">
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">«</span>
+                          </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">»</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+
+                </div>
+              </div>
+              <div id="workTab2" class="tab-pane fade p-4" role="tabpanel"></div>
+              <div id="mtpTab2" class="tab-pane fade p-4" role="tabpanel"></div>
+              <div id="chatTab2" class="tab-pane fade p-4" role="tabpanel"></div>
+              <div id="changeHistoryTab2" class="tab-pane fade p-4" role="tabpanel"></div>
+              <div id="filesTab2" class="tab-pane fade p-4" role="tabpanel"></div>
+              <div id="projectsTab2" class="tab-pane fade p-4" role="tabpanel"></div>
+              <div id="tasksTab2" class="tab-pane fade p-4" role="tabpanel"></div>
             </div>
           </div>
         </div>
