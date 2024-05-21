@@ -101,11 +101,11 @@ $(document).ready(function () {
 
   }
 
-  $('tree-view li').on('click', function (event) {
+  $('.tree-view li').on('click', function (event) {
     if (event.target.className == 'form-check-input') {
       $('.single-check').prop('checked', false)
     } else {
-      $('tree-view li input:checked').prop('checked', false);
+      $('.tree-view li input:checked').prop('checked', false);
       $(this).find('input[type="checkbox"]').prop('checked', true);
       $(this).find('input[type="checkbox"]').addClass('single-check')
     }

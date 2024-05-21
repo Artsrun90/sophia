@@ -83,9 +83,10 @@ body,
 .layout {
   background-color: rgba(var(--bs-tertiary-bg-rgb), 1);
   min-height: 100vh;
-  padding-left: 95px;
+  /* padding-left: 95px; */
   padding-top: 70px;
   transition: padding-left .25s linear;
+  display: flex;
 }
 
 @media only screen and (min-width : 1024px) {
@@ -149,11 +150,11 @@ body,
 
 /*sidebar*/
 .sidebar {
-  position: fixed;
+  /* position: fixed;
   z-index: 200;
   bottom: 0;
-  left: 0;
-  top: 70px;
+  left: 0; */
+  /* top: 70px; */
   background-color: rgba(var(--bs-primary-rgb), 1);
   width: 95px;
   transition: all .24s linear;
@@ -161,6 +162,7 @@ body,
   align-items: flex-start;
   justify-content: space-between;
   flex-direction: column;
+  height: calc(100vh - 70px);
 }
 
 .sidebar.open {
@@ -168,7 +170,7 @@ body,
 }
 
 .sidebar-nav {
-  height: calc(100% - 102px);
+  height: 100%;
   overflow-y: auto;
   width: 100%;
 }
@@ -209,9 +211,17 @@ body,
   background-color: #253544;
 }
 
+.open + ul {
+  display: block !important;
+}
+
 @media only screen and (min-width : 1024px) {
   .sidebar:hover {
     width: 308px;
+  }
+
+  .sidebar:hover .sidebar-nav-item__icn {
+    transform: rotate(180deg);
   }
 
   .sidebar:hover .sidebar-nav-item {
@@ -248,6 +258,7 @@ body,
   transition: transform .25s linear;
 }
 
+.show-mob-menu .sidebar-nav-item--right .sidebar-nav-item__icn,
 .open .sidebar-nav-item--right .sidebar-nav-item__icn {
   transform: rotate(180deg);
 }
@@ -442,6 +453,7 @@ body,
   /* border: 1px solid #ccc; */
   text-align: center;
   border-top: 1px solid #80808059;
+  white-space: nowrap;
 }
 
 .grid-item:not(:first-child) {
@@ -449,10 +461,11 @@ body,
 }
 
 .grid-header {
-  font-weight: bold;
+  font-weight: 500;
   /* style for header cells */
   background-color: white;
   /* different background for header */
+  font-size: 14.4px;
 }
 
 .grid-table-content {
@@ -489,8 +502,11 @@ body,
   border-top: 1px solid #80808059;
   padding: 0.5rem;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: flex-start;
+  padding-left: 1rem;
+  font-size: 14.4px;
+  font-weight: 400;
 }
 
 .table-row-item:not(:last-child) {
@@ -536,10 +552,6 @@ body,
 :-moz-placeholder {
   color: #1C162F !important;
   opacity: 0.31 !important;
-}
-
-.btn:hover {
-  background-color: initial !important;
 }
 
 .modal-bg {
@@ -694,7 +706,6 @@ body,
 .type-dropdown-container {
   position: relative;
   display: inline-block;
-  width: 300px;
 }
 
 .type-icons {
@@ -801,7 +812,23 @@ body,
   left: 0 !important;
 }
 
+input[type="datetime-local"]::-webkit-calendar-picker-indicator,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  display: block;
+  background: url(../img/calendar.svg) no-repeat;
+  width: 20px;
+  height: 20px;
+  border-width: thin;
+}
+
+
 @media (max-width: 640px) {
+  .sidebar {
+    position: fixed;
+    z-index: 1000;
+  }
 
   .sidebar,
   .sidebar-nav-item {
@@ -845,14 +872,8 @@ body,
 
   input[type='datetime-local'],
   input[type='date'],
-  .w-15,
-  .w-85,
   .mob-w-100 {
     width: 100% !important;
-  }
-
-  .w-15 {
-    text-align: left !important;
   }
 
   .modal-btns {
@@ -887,5 +908,9 @@ body,
   .modal-dialog-scrollable .modal-body {
     overflow-y: auto;
     padding-bottom: 4rem !important;
+  }
+
+  .modal-content label {
+    font-size: 14px;
   }
 }
