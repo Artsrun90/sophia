@@ -24,3 +24,20 @@ document.querySelectorAll('.main-checkbox').forEach(main => {
     }
   })
 });
+
+const inputField = document.querySelector('.element-form');
+const formInput = inputField.querySelector('input')
+formInput.addEventListener('focus', () => {
+  inputField.querySelector('i').style.display = 'none';
+});
+
+formInput.addEventListener('blur', () => {
+  inputField.querySelector('i').style.display = 'block';
+});
+
+document.querySelectorAll('.sidebar-nav-item__txt').forEach(menItem => {
+  menItem.addEventListener('click', () => {
+    menItem.closest('ul').closest('li').querySelector('.js-drop').classList.remove('open')
+    document.querySelector('.sidebar').classList.remove('open')
+  })
+});

@@ -152,12 +152,9 @@ document.addEventListener('click', (event) => {
 
 const selectModal = document.getElementById('selectModal')
 document.getElementById('open-select-modal').addEventListener('click', () => {
-  const cardModal = document.getElementById('cardModal')
-  cardModal.classList.remove('show')
-  cardModal.style.display = 'none'
   selectModal.classList.add('show')
   selectModal.style.display = 'block'
-  selectModal.style.zIndex = '10000'
+  selectModal.style.zIndex = '1060'
 })
 
 const body = document.querySelector('body')
@@ -165,10 +162,6 @@ document.querySelector('.close-select-modal').addEventListener('click', () => {
   selectModal.classList.remove('show')
   selectModal.style.display = 'none'
   selectModal.style.zIndex = '0'
-  document.querySelector('.modal-backdrop').remove()
-  body.classList.remove('modal-open')
-  body.style.overflow = 'visible'
-  body.style.paddingRight = '0px'
 })
 
 document.querySelectorAll('.main-table-row').forEach(element => {
@@ -189,7 +182,7 @@ document.querySelectorAll('.main-table-row').forEach(element => {
     })
     modal.classList.add('show')
     modal.style.display = 'block'
-    modal.style.zIndex = '10000'
+    modal.style.zIndex = '1051'
     body.appendChild(back)
   })
 });
