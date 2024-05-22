@@ -16,11 +16,11 @@ document.querySelector('.sidebar-nav-item--right').addEventListener('click', (e)
 document.querySelectorAll('.main-checkbox').forEach(main => {
   main.addEventListener('click', () => {
     const parent = main.closest('.table-responsive')
-    const checkboxes =parent.querySelector('ul').querySelectorAll('.form-check-input')
+    const checkboxes = parent.querySelector('ul').querySelectorAll('.form-check-input')
     if (main.checked) {
-      checkboxes.forEach(el => {el.checked = true});
+      checkboxes.forEach(el => { el.checked = true });
     } else {
-      checkboxes.forEach(el => {el.checked = false});      
+      checkboxes.forEach(el => { el.checked = false });
     }
   })
 });
@@ -40,4 +40,23 @@ document.querySelectorAll('.sidebar-nav-item__txt').forEach(menItem => {
     menItem.closest('ul').closest('li').querySelector('.js-drop').classList.remove('open')
     document.querySelector('.sidebar').classList.remove('open')
   })
+});
+
+$(document).ready(function () {
+  const options = {
+    placeholder: 'Product Description',
+    tabsize: 2,
+    height: 120,
+    toolbar: [
+      ['style', ['style']],
+      ['font', ['bold', 'underline', 'clear']],
+      ['color', ['color']],
+      ['para', ['ul', 'ol', 'paragraph']],
+      ['table', ['table']],
+      ['insert', ['link', 'picture', 'video']],
+      ['view', ['fullscreen', 'codeview', 'help']]
+    ]
+  }
+  $('#summernote').summernote(options);
+  $('#card-summernote').summernote(options);
 });

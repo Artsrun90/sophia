@@ -7,6 +7,7 @@ $(document).ready(function () {
   const treevew2Id = '#tree-view-2';
   const treevew3Id = '#tree-view-3';
   const treevew4Id = '#tree-view-4';
+  const treevew5Id = '#tree-view-5';
   const treevew1 = new TreeSortable({
     treeSelector: treevew1Id,
     maxLevel: 3
@@ -23,15 +24,21 @@ $(document).ready(function () {
     treeSelector: treevew4Id,
     maxLevel: 3
   });
+  const treevew5 = new TreeSortable({
+    treeSelector: treevew5Id,
+    maxLevel: 3
+  });
   treevew1.run();
   treevew2.run();
   treevew3.run();
   treevew4.run();
+  treevew5.run();
 
   treeOptions(treevew1, treevew1Id)
   treeOptions(treevew2, treevew2Id)
   treeOptions(treevew3, treevew3Id)
   treeOptions(treevew4, treevew4Id)
+  treeOptions(treevew5, treevew5Id)
 
   function treeOptions(tree, treeId) {
     tree.onSortCompleted(async (event, ui) => {
@@ -170,7 +177,7 @@ document.querySelectorAll('.main-table-row').forEach(element => {
     back.classList.add('modal-backdrop')
     back.classList.add('fade')
     back.classList.add('show')
-    const modal = document.getElementById('cardItemModal')
+    const modal = document.getElementById('cardModal')
     modal.querySelector('.close-cart-item-modal').addEventListener('click', () => {
       modal.classList.remove('show')
       modal.style.display = 'none'
@@ -184,5 +191,19 @@ document.querySelectorAll('.main-table-row').forEach(element => {
     modal.style.display = 'block'
     modal.style.zIndex = '1051'
     body.appendChild(back)
+  })
+});
+
+document.querySelectorAll('.open-current-cart-modal').forEach(element => {
+  element.addEventListener('click', () => {
+    const modal = document.getElementById('cardItemModal')
+    modal.querySelector('.close-cart-item-modal').addEventListener('click', () => {
+      modal.classList.remove('show')
+      modal.style.display = 'none'
+      modal.style.zIndex = '0'
+    })
+    modal.classList.add('show')
+    modal.style.display = 'block'
+    modal.style.zIndex = '1052'
   })
 });

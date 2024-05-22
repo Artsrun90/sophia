@@ -871,6 +871,31 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   overflow-y: auto;
 }
 
+.table-responsive::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  background: #F1F1F1;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background-color: #2C3E50;
+}
+
+.card-header {
+  background: none;
+}
+
+.note-btn-group .note-btn {
+  border: none;
+}
+
+.note-editor {
+  width: 85%;
+  background-color: white;
+}
 
 @media (max-width: 640px) {
   .modal-top-btns {
