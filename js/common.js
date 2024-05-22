@@ -60,3 +60,28 @@ $(document).ready(function () {
   $('#summernote').summernote(options);
   $('#card-summernote').summernote(options);
 });
+
+const mainSwiper = new Swiper(".table-header-swiper", {
+  spaceBetween: 0,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 5,
+    },
+    640: {
+      slidesPerView: 5,
+    },
+    760: {
+      slidesPerView: 8,
+    },
+    1024: {
+      slidesPerView: 12,
+    },
+    1600: {
+      slidesPerView: 12,
+    },
+  }
+});

@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/jquery-ui.min.css" />
   <link rel="stylesheet" href="css/treeSortable.css" />
   <link rel="stylesheet" href="css/summernote-bs5.css">
+  <link rel="stylesheet" href="css/swiper.css">
   <link rel="stylesheet" href="css/custom.css" />
 </head>
 
@@ -130,7 +131,8 @@
                   <span class="sidebar-nav-item__icn">
                     <i class="bi bi-card-list"></i>
                   </span>
-                  <span class="sidebar-nav-item__txt" data-bs-toggle="modal" data-bs-target="#administratoMenu">Меню администратора</span>
+                  <span class="sidebar-nav-item__txt" data-bs-toggle="modal" data-bs-target="#administratoMenu">Меню
+                    администратора</span>
                 </a>
               </li>
               <li>
@@ -391,61 +393,93 @@
       </ol>
       <div class="border block">
         <div class="d-flex justify-content-between align-items-center gap-3">
-          <div class="d-flex justify-content-start align-items-center gap-3 overflow-x-auto">
-            <div class="btn-group tools" role="group" aria-label="Basic example">
-              <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
-                <i class="bi bi-folder-plus"></i>
-              </button>
-              <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
-                <i class="bi bi-plus-circle"></i>
-              </button>
-              <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
-                <i class="bi bi-copy"></i>
-              </button>
-              <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
-                <i class="bi bi-pen"></i>
-              </button>
-              <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
-                <i class="bi bi-eye"></i>
-              </button>
-              <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
-                <i class="bi bi-trash3"></i>
-              </button>
-              <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
-                <i class="bi bi-arrow-repeat"></i>
-              </button>
-              <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
-                <i class="bi bi-download"></i>
-              </button>
-              <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
-                <i class="bi bi-upload"></i>
-              </button>
-              <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
-                <i class="bi bi-gear"></i>
-              </button>
-              <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
-                <i class="bi bi-list-ul"></i>
+          <div class="w-100 overflow-hidden d-flex flex-column flex-sm-row align-items-center justify-content-between gap-2 px-1 pb-2 pb-sm-0">
+            <div class="overflow-hidden w-100">
+              <div class="swiper-container table-header-swiper p-2">
+                <div class="d-flex align-items-center swiper-wrapper">
+                  <div class="d-flex align-items-center justify-content-center swiper-slide">
+                    <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                      <i class="bi bi-folder-plus"></i>
+                    </button>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-center swiper-slide">
+                    <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                      <i class="bi bi-plus-circle"></i>
+                    </button>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-center swiper-slide">
+                    <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                      <i class="bi bi-copy"></i>
+                    </button>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-center swiper-slide">
+                    <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                      <i class="bi bi-pen"></i>
+                    </button>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-center swiper-slide">
+                    <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                      <i class="bi bi-eye"></i>
+                    </button>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-center swiper-slide">
+                    <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                      <i class="bi bi-trash3"></i>
+                    </button>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-center swiper-slide">
+                    <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                      <i class="bi bi-arrow-repeat"></i>
+                    </button>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-center swiper-slide">
+                    <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                      <i class="bi bi-download"></i>
+                    </button>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-center swiper-slide">
+                    <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                      <i class="bi bi-upload"></i>
+                    </button>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-center swiper-slide">
+                    <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                      <i class="bi bi-gear"></i>
+                    </button>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-center swiper-slide">
+                    <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+                      <i class="bi bi-list-ul"></i>
+                    </button>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-center swiper-slide">
+                    <div class="form-check form-switch position-relative delete-check">
+                      <input class="form-check-input" type="checkbox" role="switch" id="delete-switcher">
+                      <i class="bi bi-trash3"></i>
+                    </div>
+                  </div>
+                </div>
+                <span class="swiper-button-prev"></span>
+                <span class="swiper-button-next"></span>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <form method="get" action="#" class="input-group" style="min-width: 100px;" role="search">
+                <input type="search" name="search" class="form-control" placeholder="Поиск" required>
+                <button type="button" class="btn btn-primary" data-mdb-ripple-init>
+                  <i class="bi bi-search"></i>
+                </button>
+              </form>
+              <button class="btn icon-link link-body-emphasis text-nowrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-funnel-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5z" />
+                </svg>
+                Создать фильтр
               </button>
             </div>
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="delete-switcher">
-              <label class="form-check-label" for="delete-switcher">Удаление</label>
-            </div>
-            <form method="get" action="#" class="input-group" style="min-width: 140px;" role="search">
-              <input type="search" name="search" class="form-control" placeholder="Поиск" required>
-              <button type="button" class="btn btn-primary" data-mdb-ripple-init>
-                <i class="bi bi-search"></i>
-              </button>
-            </form>
           </div>
-          <button class="btn icon-link link-body-emphasis">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel-fill"
-              viewBox="0 0 16 16">
-              <path
-                d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5z" />
-            </svg>
-            Создать фильтр
-          </button>
         </div>
         <div class="table-responsive">
 
@@ -1114,7 +1148,8 @@
               </div> -->
               <div class="d-flex flex-column flex-sm-row align-items-start align-item gap-1 gap-sm-4 w-100">
                 <label for="tekh-maska" class="form-label text-end w-15">Название</label>
-                <input type="text" value="Меню адмиадминистратора" class="form-control w-100" id="inputValid" placeholder="">
+                <input type="text" value="Меню адмиадминистратора" class="form-control w-100" id="inputValid"
+                  placeholder="">
               </div>
               <div class="d-flex flex-column flex-sm-row align-items-start align-item gap-1 gap-sm-4 w-100">
                 <label for="tekh-maska" class="form-label text-end w-15">Порядок</label>
@@ -1149,7 +1184,7 @@
                           <a href="#menu0" data-bs-toggle="collapse" aria-expanded="false" aria-controls="menu0"
                             class="collapsed">
                             Задачи
-                          </a>                          
+                          </a>
                         </div>
                       </li>
                       <li>
@@ -1354,37 +1389,48 @@
           <div class="m-3 rounded border overflow-x-auto">
             <div class="d-flex justify-content-start align-items-center gap-3">
               <div class="btn-group tools flex-wrap" role="group" aria-label="Basic example">
-                <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Default tooltip">
+                <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                  data-bs-title="Default tooltip">
                   <i class="bi bi-folder-plus"></i>
                 </button>
-                <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Default tooltip">
+                <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                  data-bs-title="Default tooltip">
                   <i class="bi bi-plus-circle"></i>
                 </button>
-                <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Default tooltip">
+                <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                  data-bs-title="Default tooltip">
                   <i class="bi bi-copy"></i>
                 </button>
-                <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Default tooltip">
+                <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                  data-bs-title="Default tooltip">
                   <i class="bi bi-pen"></i>
                 </button>
-                <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Default tooltip">
+                <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                  data-bs-title="Default tooltip">
                   <i class="bi bi-eye"></i>
                 </button>
-                <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Default tooltip">
+                <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                  data-bs-title="Default tooltip">
                   <i class="bi bi-trash3"></i>
                 </button>
-                <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Default tooltip">
+                <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                  data-bs-title="Default tooltip">
                   <i class="bi bi-arrow-repeat"></i>
                 </button>
-                <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Default tooltip">
+                <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                  data-bs-title="Default tooltip">
                   <i class="bi bi-download"></i>
                 </button>
-                <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Default tooltip">
+                <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                  data-bs-title="Default tooltip">
                   <i class="bi bi-upload"></i>
                 </button>
-                <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Default tooltip">
+                <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                  data-bs-title="Default tooltip">
                   <i class="bi bi-gear"></i>
                 </button>
-                <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Default tooltip">
+                <button class="btn btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                  data-bs-title="Default tooltip">
                   <i class="bi bi-list-ul"></i>
                 </button>
               </div>
@@ -2008,7 +2054,8 @@
         <div class="modal-header modal-bg">
           <div class="d-flex align-items-center justify-content-between w-100">
             <p class="m-0 text-white">Карточка</p>
-            <button type="button" class="btn-close btn-close-white close-cart-item-modal" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button type="button" class="btn-close btn-close-white close-cart-item-modal" data-bs-dismiss="modal"
+              aria-label="Close"></button>
           </div>
         </div>
         <div class="modal-body p-0">
@@ -2078,8 +2125,7 @@
                     <input type="text" value="" class="form-control w-85" id="inputValid"
                       placeholder="Название карточки">
                   </div>
-                  <div
-                    class="d-flex gap-4 w-100 position-relative">
+                  <div class="d-flex gap-4 w-100 position-relative">
                     <label for="tekh-maska" class="form-label text-end w-15">Тип*</label>
                     <div class="type-dropdown-container w-85">
                       <input type="text" class="type-dropdown-input form-control w-100" placeholder="Select an item"
@@ -3186,7 +3232,8 @@
         <div class="modal-header modal-bg">
           <div class="d-flex align-items-center justify-content-between w-100">
             <p class="m-0 text-white">Карточка - 111</p>
-            <button type="button" class="btn-close btn-close-white close-cart-item-modal" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button type="button" class="btn-close btn-close-white close-cart-item-modal" data-bs-dismiss="modal"
+              aria-label="Close"></button>
           </div>
         </div>
         <div class="modal-body p-0">
@@ -3256,8 +3303,7 @@
                     <input type="text" value="" class="form-control w-85" id="inputValid"
                       placeholder="Название карточки">
                   </div>
-                  <div
-                    class="d-flex gap-4 w-100 position-relative">
+                  <div class="d-flex gap-4 w-100 position-relative">
                     <label for="tekh-maska" class="form-label text-end w-15">Тип*</label>
                     <div class="type-dropdown-container w-85">
                       <input type="text" class="type-dropdown-input form-control w-100" placeholder="Select an item"
@@ -4364,6 +4410,7 @@
   <script src="js/treeSortable.js"></script>
   <script src="js/jquery.custom.js"></script>
   <script src="js/summernote-bs5.js"></script>
+  <script src="js/swiper.js"></script>
   <script src="js/common.js"></script>
 </body>
 

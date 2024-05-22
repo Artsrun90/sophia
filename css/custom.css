@@ -211,11 +211,11 @@ body,
   background-color: #253544;
 }
 
-.open + ul {
+.open+ul {
   display: block !important;
 }
 
-.open.sidebar ~ .main {
+.open.sidebar~.main {
   padding-left: calc(218px + .75rem);
 }
 
@@ -224,7 +224,7 @@ body,
     width: 308px;
   }
 
-  .sidebar:hover ~ .main {
+  .sidebar:hover~.main {
     padding-left: calc(218px + .75rem);
   }
 
@@ -715,9 +715,9 @@ body,
   position: relative;
 }
 
-.form.element-form .form-input:focus + i,
-.form.element-form .form-input:focus ~ i {
-    display: none;
+.form.element-form .form-input:focus+i,
+.form.element-form .form-input:focus~i {
+  display: none;
 }
 
 .popup-tree li a {
@@ -897,6 +897,38 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background-color: white;
 }
 
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: url(../img/swiper-arrow.svg);
+  position: absolute;
+  top: -6px;
+}
+
+.swiper-button-prev {
+  left: 0;
+  transform: rotate(180deg);
+}
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-container {
+  width: 100%;
+  position: relative;
+}
+
+.delete-check i {
+  position: absolute;
+  right: 8px;
+  top: 2px;
+  font-size: 0.75rem;
+  color: #938ea394;
+}
+
+.delete-check.form-switch .form-check-input:checked + i {
+  display: none;
+}
+
 @media (max-width: 640px) {
   .modal-top-btns {
     position: fixed;
@@ -914,7 +946,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-top: 20px !important;
   }
 
-  .header__right > button:first-child,
+  .header__right>button:first-child,
   .sidebar-nav-item--right {
     display: none;
   }
