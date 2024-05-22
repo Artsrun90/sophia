@@ -85,3 +85,62 @@ const mainSwiper = new Swiper(".table-header-swiper", {
     },
   }
 });
+
+const modalSwiper1 = new Swiper(".modal-swiper-1", {
+  spaceBetween: 0,
+  navigation: {
+    nextEl: ".modal-swiper-1-button-next",
+    prevEl: ".modal-swiper-1-button-prev",
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 5,
+    },
+    640: {
+      slidesPerView: 5,
+    },
+    760: {
+      slidesPerView: 8,
+    },
+    1024: {
+      slidesPerView: 12,
+    },
+    1600: {
+      slidesPerView: 12,
+    },
+  },
+  on: {
+    reachEnd: function () {
+      document.querySelector('.modal-swiper-1').style.paddingRight = '30px';
+    },
+    fromEdge: function () {
+      document.querySelector('.modal-swiper-1').style.paddingRight = '0';
+    }
+  }
+});
+
+['.tab-swiper-1', '.tab-swiper-2'].forEach(element => {
+  new Swiper(element, {
+    spaceBetween: 0,
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+      },
+      420: {
+        slidesPerView: 3,
+      },
+      640: {
+        slidesPerView: 3,
+      },
+      760: {
+        slidesPerView: 4,
+      },
+      1024: {
+        slidesPerView: 6,
+      },
+      1600: {
+        slidesPerView: 8,
+      },
+    }
+  });
+});

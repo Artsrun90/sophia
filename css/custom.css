@@ -331,7 +331,6 @@ body,
   background-color: var(--bs-body-bg);
   box-shadow: 0 1px 2px var(--bs-border-color);
   border-radius: var(--bs-border-radius-lg);
-  /*  padding: .375rem .75rem;*/
 }
 
 /*tools-header*/
@@ -445,24 +444,12 @@ body,
 .grid-container {
   display: grid;
   grid-template-columns: 5% 15% repeat(6, calc(85% / 6));
-  /* 1 column at 5%, 7 columns equally distributed */
-  /* gap: 1px; */
   min-width: 1300px;
-}
-
-.grid-container-2 {
-  display: grid;
-  grid-template-columns: 5% 17% 17% 17% 44%;
-  /* 1 column at 5%, 7 columns equally distributed */
-  /* gap: 1px; */
-  min-width: 838px;
 }
 
 .grid-item {
   background-color: #fff;
-  /* cell background color */
   padding: 0.5rem 0.5rem;
-  /* border: 1px solid #ccc; */
   text-align: center;
   border-top: 1px solid #80808059;
   white-space: nowrap;
@@ -730,14 +717,6 @@ body,
   left: -30px;
 }
 
-/* .popup-tree li:nth-child(odd) a::after {
-  content: url(../img/tree-icon-1.svg);
-}
-
-.popup-tree li:nth-child(even) a::after {
-  content: url(../img/tree-icon-2.svg);
-} */
-
 .card-tabs li a {
   padding: 0.4rem 0.8rem !important;
 }
@@ -897,6 +876,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background-color: white;
 }
 
+.modal-swiper-1-button-prev,
+.modal-swiper-1-button-next {
+  position: absolute;
+  width: 17px;
+  z-index: 1;
+}
+
+.modal-swiper-1-button-prev::after,
+.modal-swiper-1-button-next::after,
 .swiper-button-prev::after,
 .swiper-button-next::after {
   content: url(../img/swiper-arrow.svg);
@@ -904,17 +892,46 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   top: -6px;
 }
 
+.modal-swiper-1-button-prev,
 .swiper-button-prev {
   left: 0;
   transform: rotate(180deg);
 }
+
+.modal-swiper-1-button-next,
 .swiper-button-next {
   right: 0;
 }
 
-.swiper-container {
+.modal-swiper-1-button-prev {
+  top: 30px;
+}
+
+.modal-swiper-1-button-next {
+  top: 18px;
+}
+
+.swiper-container,
+.modal-swiper {
   width: 100%;
   position: relative;
+}
+
+.modal-swiper .swiper-button-disabled {
+  opacity: 0.3;
+}
+
+.tab-swiper {
+  width: 100%;
+  border-bottom: 1px solid #ced4da;
+}
+
+.tab-swiper ul {
+  border-bottom: 0;
+}
+
+.tab-swiper .nav-item {
+  background-color: white;
 }
 
 .delete-check i {
