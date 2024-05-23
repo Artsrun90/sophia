@@ -57,6 +57,30 @@ body,
   width: 295px;
 }
 
+.main-pagination {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: #EBEEF5;
+  z-index: 100;
+  width: calc(100% - 95px + .75rem);
+  transition: padding .24s linear;
+}
+
+.main-table-content {
+  max-height: 72vh;
+  overflow: hidden;
+}
+
+
+.main-table-content .table-responsive {
+  padding-bottom: 10rem;
+}
+
+.branch-drag-handler {
+  cursor: grab;
+}
+
 @media only screen and (max-width : 1024px) {
   .main-page {
     display: block;
@@ -215,6 +239,7 @@ body,
   display: block !important;
 }
 
+.open.sidebar~.main-pagination,
 .open.sidebar~.main {
   padding-left: calc(218px + .75rem);
 }
@@ -224,6 +249,7 @@ body,
     width: 308px;
   }
 
+  .sidebar:hover~.main-pagination,
   .sidebar:hover~.main {
     padding-left: calc(218px + .75rem);
   }
@@ -942,7 +968,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   color: #938ea394;
 }
 
-.delete-check.form-switch .form-check-input:checked + i {
+.delete-check.form-switch .form-check-input:checked+i {
   display: none;
 }
 
@@ -969,8 +995,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 
   .sidebar,
-  .sidebar-nav-item {
+  .sidebar-nav-item,
+  .main-pagination {
     width: 100%;
+  }
+
+  .main-table {
+    padding-bottom: 170px;
   }
 
   .sidebar {
