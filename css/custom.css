@@ -903,7 +903,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .modal-swiper-1-button-prev,
-.modal-swiper-1-button-next {
+.modal-swiper-1-button-next,
+.modal-swiper-2-button-prev,
+.modal-swiper-2-button-next,
+.modal-swiper-3-button-prev,
+.modal-swiper-3-button-next,
+.modal-swiper-4-button-prev,
+.modal-swiper-4-button-next {
   position: absolute;
   width: 17px;
   z-index: 1;
@@ -911,6 +917,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .modal-swiper-1-button-prev::after,
 .modal-swiper-1-button-next::after,
+.modal-swiper-2-button-prev::after,
+.modal-swiper-2-button-next::after,
+.modal-swiper-3-button-prev::after,
+.modal-swiper-3-button-next::after,
+.modal-swiper-4-button-prev::after,
+.modal-swiper-4-button-next::after,
 .swiper-button-prev::after,
 .swiper-button-next::after {
   content: url(../img/swiper-arrow.svg);
@@ -919,21 +931,33 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .modal-swiper-1-button-prev,
+.modal-swiper-2-button-prev,
+.modal-swiper-3-button-prev,
+.modal-swiper-4-button-prev,
 .swiper-button-prev {
   left: 0;
   transform: rotate(180deg);
 }
 
 .modal-swiper-1-button-next,
+.modal-swiper-2-button-next,
+.modal-swiper-3-button-next,
+.modal-swiper-4-button-next,
 .swiper-button-next {
   right: 0;
 }
 
-.modal-swiper-1-button-prev {
+.modal-swiper-1-button-prev,
+.modal-swiper-2-button-prev,
+.modal-swiper-3-button-prev,
+.modal-swiper-4-button-prev {
   top: 30px;
 }
 
-.modal-swiper-1-button-next {
+.modal-swiper-1-button-next,
+.modal-swiper-2-button-next,
+.modal-swiper-3-button-next,
+.modal-swiper-4-button-next {
   top: 18px;
 }
 
