@@ -104,10 +104,10 @@ const mainSwiper = new Swiper(".table-header-swiper", {
     },
     breakpoints: {
       320: {
-        slidesPerView: 5,
+        slidesPerView: 4,
       },
       640: {
-        slidesPerView: 5,
+        slidesPerView: 4,
       },
       760: {
         slidesPerView: 8,
