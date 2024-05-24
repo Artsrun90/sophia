@@ -1,3 +1,7 @@
+const tooltipTrigerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+tooltipTrigerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
 document.querySelector(".burger-menu").addEventListener("click", (e) => {
   e.target.classList.toggle("open");
   document.querySelector(".sidebar").classList.toggle("show-mob-menu");
@@ -10,11 +14,13 @@ document.querySelectorAll('.js-drop').forEach(element => {
 });
 
 document.querySelector('.sidebar-nav-item--right').addEventListener('click', (e) => {
-  document.querySelector('.sidebar').classList.toggle('open')
+  document.querySelector('.sidebar').classList.toggle('open');
+  collapseSidebar();
 });
 
 document.querySelectorAll('.main-checkbox').forEach(main => {
   main.addEventListener('click', () => {
+    main.classList.remove('childs-not-full-checked')
     const parent = main.closest('.table-responsive')
     const checkboxes = parent.querySelector('ul').querySelectorAll('.form-check-input')
     if (main.checked) {
@@ -25,14 +31,16 @@ document.querySelectorAll('.main-checkbox').forEach(main => {
   })
 });
 
-const inputField = document.querySelector('.element-form');
-const formInput = inputField.querySelector('input')
+const inputForm = document.querySelector('.element-form');
+const formInput = inputForm.querySelector('input')
 formInput.addEventListener('focus', () => {
-  inputField.querySelector('i').style.display = 'none';
+  inputForm.querySelector('i').style.display = 'none';
 });
 
 formInput.addEventListener('blur', () => {
-  inputField.querySelector('i').style.display = 'block';
+  if (!formInput.value.trim()) {
+    inputForm.querySelector('i').style.display = 'block';
+  }
 });
 
 document.querySelectorAll('.sidebar-nav-item__txt').forEach(menItem => {
@@ -86,7 +94,7 @@ const mainSwiper = new Swiper(".table-header-swiper", {
   }
 });
 
-[1 , 2, 3, 4].forEach(num => {
+[1, 2, 3, 4].forEach(num => {
   console.log(num);
   new Swiper(`.modal-swiper-${num}`, {
     spaceBetween: 0,
@@ -119,7 +127,7 @@ const mainSwiper = new Swiper(".table-header-swiper", {
         document.querySelector(`.modal-swiper-${num}`).style.paddingRight = '0';
       }
     }
-  });  
+  });
 });
 
 
@@ -148,3 +156,14 @@ const mainSwiper = new Swiper(".table-header-swiper", {
     }
   });
 });
+
+document.querySelector('.sidebar').addEventListener('mouseleave', (e) => {
+  if (window.innerWidth > 1024) {
+    collapseSidebar()   
+  }
+});
+
+function collapseSidebar() {
+  const openItems = document.querySelector('.sidebar').querySelectorAll('.open');
+  openItems.forEach(item => item.classList.remove('open'));
+}

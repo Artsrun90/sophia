@@ -109,13 +109,32 @@ $(document).ready(function () {
   }
 
   $('.tree-view li').on('click', function (event) {
+    const mainCheckbox = $(event.target).closest('.table-responsive').find('.main-checkbox')
     if (event.target.className == 'form-check-input') {
       $('.single-check').prop('checked', false)
+      document.querySelectorAll('.form-check-input').forEach(element => {
+        element.classList.remove('single-check')
+      });
     } else {
+      $('.single-check').prop('checked', false)
+      document.querySelectorAll('.form-check-input').forEach(element => {
+        element.classList.remove('single-check')
+      });
       $('.tree-view li input:checked').prop('checked', false);
       $(this).find('input[type="checkbox"]').prop('checked', true);
       $(this).find('input[type="checkbox"]').addClass('single-check')
     }
+    const notChecked = $(event.target).closest('.table-responsive').find('input[type="checkbox"]:not(:checked)')
+    if (!mainCheckbox.prop('checked')) {
+      mainCheckbox.addClass('childs-not-full-checked')
+    } else {
+      if (!notChecked.length) {
+        mainCheckbox.removeClass('childs-not-full-checked')
+      } else {
+        mainCheckbox.addClass('childs-not-full-checked')        
+      }
+    }
+    mainCheckbox.prop('checked', true)
   });
 
   function arraysEqual(arr1, arr2) {
