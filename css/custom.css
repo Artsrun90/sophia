@@ -865,12 +865,42 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   color: rgba(0, 0, 0, 0);
   opacity: 1;
   display: block;
-  background: url(../img/calendar.svg) no-repeat;
-  background-size: contain;
+  background: url(../img/calendar.svg) no-repeat center center / contain;
   width: 20px;
   height: 20px;
   border-width: thin;
 }
+
+input[type="datetime-local"]::-moz-calendar-picker-indicator,
+input[type="date"]::-moz-calendar-picker-indicator {
+  background: url(../img/calendar.svg) no-repeat center center / contain;
+}
+
+input[type="datetime-local"]::-ms-clear,
+input[type="date"]::-ms-clear {
+  background: url(../img/calendar.svg) no-repeat center center / contain;
+}
+
+input[type="datetime-local"]::after,
+input[type="date"]::after {
+  content: '';
+  background: url(../img/calendar.svg) no-repeat center center / contain;
+  width: 26px;
+  height: 26px;
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+input[type="datetime-local"],
+input[type="date"] {
+  position: relative;
+  width: 100%;
+}
+
 
 .table-responsive,
 .nomob-scrollable-content {
