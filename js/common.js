@@ -15,7 +15,8 @@ document.querySelectorAll('.js-drop').forEach(element => {
 
 document.querySelector('.sidebar-nav-item--right').addEventListener('click', (e) => {
   document.querySelector('.sidebar').classList.toggle('open');
-  collapseSidebar();
+  // collapseSidebar();
+  toggleSubMenu()  
 });
 
 document.querySelectorAll('.main-checkbox').forEach(main => {
@@ -159,11 +160,28 @@ const mainSwiper = new Swiper(".table-header-swiper", {
 
 document.querySelector('.sidebar').addEventListener('mouseleave', (e) => {
   if (window.innerWidth > 1024) {
-    collapseSidebar()   
+    toggleSubMenu()   
+  }
+});
+
+document.querySelector('.sidebar').addEventListener('mouseenter', (e) => {
+  if (window.innerWidth > 1024) {
+    toggleSubMenu()   
   }
 });
 
 function collapseSidebar() {
   const openItems = document.querySelector('.sidebar').querySelectorAll('.open');
   openItems.forEach(item => item.classList.remove('open'));
+}
+
+function toggleSubMenu() {
+  const openItems = document.querySelector('.sidebar').querySelectorAll('.open');
+  openItems.forEach(item => {
+    const next = item.nextElementSibling;
+    if (next.tagName.toLowerCase() === 'ul') {
+      next.classList.toggle('toggle-sub-menu')
+    }
+  })
+  
 }

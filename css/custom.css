@@ -75,7 +75,7 @@ body,
 
 
 .main-table-content .table-responsive {
-  /* padding-bottom: 11rem; */
+  padding-bottom: 12px;
 }
 
 .branch-drag-handler {
@@ -374,7 +374,7 @@ body,
   border-bottom-left-radius: 0;
 }
 
-/*row*/
+/* General table styling */
 .main-table th {
   white-space: nowrap;
 }
@@ -418,8 +418,8 @@ body,
 }
 
 .main-table-footer {
-  padding-top: calc(var(--bs-gutter-x)* 0.5);
-  padding-bottom: calc(var(--bs-gutter-x)* 0.5);
+  padding-top: calc(var(--bs-gutter-x) * 0.5);
+  padding-bottom: calc(var(--bs-gutter-x) * 0.5);
 }
 
 .main-table-footer .pagination {
@@ -432,7 +432,7 @@ body,
 }
 
 .bg-color {
-  background-color: #EBEEF5;
+  background-color: #ebeef5;
 }
 
 .page-link {
@@ -467,11 +467,24 @@ body,
   display: none;
 }
 
+/* Grid container styling */
+.table-responsive {
+  overflow-x: auto;
+  position: relative;
+}
 
 .grid-container {
   display: grid;
-  grid-template-columns: 5% 15% 15% 15% 15% 15% 17% 13%;
   min-width: 1300px;
+  position: sticky;
+  top: 0;
+  background-color: white; /* Ensure background color to cover elements below */
+  z-index: 25; /* Ensure it stays on top of the ul */
+  grid-template-columns: 5% 15% 15% 15% 15% 15% 17% 13%;
+}
+
+.grid-container-header {
+  grid-template-columns: 5% 15% 15% 15% 15% 15% 17% 13%;
 }
 
 .grid-item {
@@ -479,32 +492,28 @@ body,
   padding: 0.5rem 0.5rem;
   text-align: center;
   border-top: 1px solid #80808059;
+  border-left: 1px solid #80808059; /* Ensure left border */
   white-space: nowrap;
-}
-
-.grid-item:not(:first-child) {
-  border-left: 1px solid #80808059;
 }
 
 .grid-header {
   font-weight: 500;
-  /* style for header cells */
+  /* Style for header cells */
   background-color: white;
-  /* different background for header */
+  /* Different background for header */
   font-size: 14.4px;
 }
 
 .grid-table-content {
   list-style-type: none;
-  /* remove default list styling */
+  /* Remove default list styling */
   padding: 0;
   margin: 0;
   display: contents;
-  /* treat li elements as direct children of the grid */
+  /* Treat li elements as direct children of the grid */
 }
 
 .grid-table-content li div {
-  /* border: 1px solid #ccc;  */
   padding: 0.5rem 0.5rem;
   background-color: #fff;
   text-align: center;
@@ -513,6 +522,29 @@ body,
   align-items: center;
   gap: 12px;
 }
+
+/* Add bottom border to .grid-item elements from 9 to 16 */
+.grid-item:nth-child(n+9):nth-child(-n+16) {
+  border-bottom: 1px solid #80808059;
+}
+
+/* Remove top border for first li .table-row-item */
+.tree-view li:first-child .table-row-item {
+  border-top: none !important;
+}
+
+/* Media query for larger screens */
+@media (min-width: 1420px) {
+  .grid-container,
+  .grid-container-header {
+    grid-template-columns: repeat(8, 1fr); /* Adjust the number of columns as needed */
+  }
+
+  .grid-item {
+    border-left: none; /* Adjust as needed for larger screens */
+  }
+}
+
 
 .ui-sortable {
   border-left: 1px solid #80808059;
@@ -523,6 +555,7 @@ body,
 .ui-sortable li {
   background-color: white;
 }
+
 
 .table-row-item {
   border-top: 1px solid #80808059;
@@ -601,11 +634,13 @@ body,
   border-color: var(--purple-hover);
 }
 
-.form {
+.form,
+.facility-search {
   position: relative;
 }
 
-.form .bi-search {
+.form .bi-search,
+.facility-search .bi-search {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -769,6 +804,7 @@ body,
 
 .type-icons i {
   margin: 0 !important;
+  cursor: pointer;
 }
 
 .type-icons .btn-close {
@@ -1002,7 +1038,7 @@ input[type="date"] {
 .swiper-container,
 .modal-swiper {
   width: 100%;
-  max-width: 760px;
+  /* max-width: 760px; */
   position: relative;
 }
 
@@ -1057,6 +1093,10 @@ input[type="date"] {
   justify-content: center;
 }
 
+.toggle-sub-menu li {
+  margin-left: -35px;
+}
+
 @media (max-width: 640px) {
 
   .table-responsive {
@@ -1076,6 +1116,11 @@ input[type="date"] {
     overflow: unset !important;
     max-height: 100% !important;
   } */
+  
+
+  .search-div {
+    width: 100% !important;
+  }
 
   .nav-link {
     padding: 0.7rem;
