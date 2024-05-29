@@ -158,6 +158,14 @@ const mainSwiper = new Swiper(".table-header-swiper", {
   });
 });
 
+const tabs = document.querySelectorAll('.custom-tab-item')
+tabs.forEach(el => {
+  el.addEventListener('click', () => {
+    tabs.forEach(e => e.classList.remove('active'));
+    el.classList.add('active')
+  })
+});
+
 document.querySelector('.sidebar').addEventListener('mouseleave', (e) => {
   if (window.innerWidth > 1024) {
     toggleSubMenu()   
@@ -185,3 +193,21 @@ function toggleSubMenu() {
   })
   
 }
+
+function initTabs() {  
+  document.querySelectorAll('.custom-tab-item').forEach(element => {
+    element.addEventListener('click', () => {
+      const contentId = element.closest('ul').getAttribute('data-tab-content')
+      const tabId = element.getAttribute('data-content-id')
+      const content = document.getElementById(contentId)
+      content.querySelectorAll('.tab-pane').forEach(t => {
+        t.classList.remove('active')
+        t.classList.remove('show')
+      } );
+      document.getElementById(tabId).classList.add('active')
+      document.getElementById(tabId).classList.add('show')
+    })
+  });
+}
+
+initTabs()

@@ -224,5 +224,7 @@ document.querySelectorAll('.open-current-cart-modal').forEach(element => {
     modal.classList.add('show')
     modal.style.display = 'block'
     modal.style.zIndex = '1052'
+
+    initTabs()
   })
 });
