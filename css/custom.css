@@ -365,6 +365,9 @@ body,
 .sidebar-nav ul ul .sidebar-nav-item:hover {
   background-color: rgba(var(--bs-primary-rgb), 1);
 }
+.sidebar-nav-item.open {
+  background-color: #253544;
+}
 
 .sidebar.open .sidebar-nav-item {
   padding-left: 27px;
