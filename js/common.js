@@ -1,9 +1,9 @@
 let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl, {
-        container: 'body',
-        trigger : 'hover'
-    });
+  return new bootstrap.Tooltip(tooltipTriggerEl, {
+    container: 'body',
+    trigger: 'hover'
+  });
 })
 document.querySelector(".burger-menu").addEventListener("click", (e) => {
   e.target.classList.toggle("open");
@@ -19,7 +19,7 @@ document.querySelectorAll('.js-drop').forEach(element => {
 document.querySelector('.sidebar-nav-item--right').addEventListener('click', (e) => {
   document.querySelector('.sidebar').classList.toggle('open');
   // collapseSidebar();
-  toggleSubMenu()  
+  toggleSubMenu()
 });
 
 document.querySelectorAll('.main-checkbox').forEach(main => {
@@ -171,13 +171,13 @@ tabs.forEach(el => {
 
 document.querySelector('.sidebar').addEventListener('mouseleave', (e) => {
   if (window.innerWidth > 1024) {
-    toggleSubMenu()   
+    toggleSubMenu()
   }
 });
 
 document.querySelector('.sidebar').addEventListener('mouseenter', (e) => {
   if (window.innerWidth > 1024) {
-    toggleSubMenu()   
+    toggleSubMenu()
   }
 });
 
@@ -194,10 +194,10 @@ function toggleSubMenu() {
       next.classList.toggle('toggle-sub-menu')
     }
   })
-  
+
 }
 
-function initTabs() {  
+function initTabs() {
   document.querySelectorAll('.custom-tab-item').forEach(element => {
     element.addEventListener('click', () => {
       const contentId = element.closest('ul').getAttribute('data-tab-content')
@@ -206,7 +206,7 @@ function initTabs() {
       content.querySelectorAll('.tab-pane').forEach(t => {
         t.classList.remove('active')
         t.classList.remove('show')
-      } );
+      });
       document.getElementById(tabId).classList.add('active')
       document.getElementById(tabId).classList.add('show')
     })
@@ -214,3 +214,116 @@ function initTabs() {
 }
 
 initTabs()
+
+$('.tree-view li').on('click', function (event) {
+  const mainCheckbox = $(event.target).closest('.table-responsive').find('.main-checkbox')
+  if (event.target.className == 'form-check-input') {
+    $('.single-check').prop('checked', false)
+    document.querySelectorAll('.form-check-input').forEach(element => {
+      element.classList.remove('single-check')
+    });
+  } else {
+    $('.single-check').prop('checked', false)
+    document.querySelectorAll('.form-check-input').forEach(element => {
+      element.classList.remove('single-check')
+    });
+    $('.tree-view li input:checked').prop('checked', false);
+    $(this).find('input[type="checkbox"]').prop('checked', true);
+    $(this).find('input[type="checkbox"]').addClass('single-check')
+  }
+  const notChecked = $(event.target).closest('.table-responsive').find('input[type="checkbox"]:not(:checked)')
+  if (!mainCheckbox.prop('checked')) {
+    mainCheckbox.addClass('childs-not-full-checked')
+  } else {
+    if (!notChecked.length) {
+      mainCheckbox.removeClass('childs-not-full-checked')
+    } else {
+      mainCheckbox.addClass('childs-not-full-checked')
+    }
+  }
+  mainCheckbox.prop('checked', true)
+});
+
+
+const dropdownInput = document.querySelector('.type-dropdown-input');
+const dropdownList = document.querySelector('.type-dropdown-list');
+const dropdownItems = document.querySelectorAll('.type-dropdown-item');
+const clearIcon = document.querySelector('.type-icon-clear');
+
+// Toggle dropdown list
+dropdownInput.addEventListener('click', () => {
+  dropdownList.style.display = dropdownList.style.display === 'block' ? 'none' : 'block';
+});
+
+// Select item from dropdown
+dropdownItems.forEach(item => {
+  item.addEventListener('click', () => {
+    dropdownInput.value = item.textContent;
+    dropdownList.style.display = 'none';
+  });
+});
+
+// Clear selected item
+clearIcon.addEventListener('click', () => {
+  dropdownInput.value = '';
+});
+
+// Close dropdown if clicked outside
+document.addEventListener('click', (event) => {
+  if (!event.target.closest('.type-dropdown-container')) {
+    dropdownList.style.display = 'none';
+  }
+});
+
+const selectModal = document.getElementById('selectModal')
+document.getElementById('open-select-modal').addEventListener('click', () => {
+  selectModal.classList.add('show')
+  selectModal.style.display = 'block'
+  selectModal.style.zIndex = '1060'
+})
+
+const body = document.querySelector('body')
+document.querySelector('.close-select-modal').addEventListener('click', () => {
+  selectModal.classList.remove('show')
+  selectModal.style.display = 'none'
+  selectModal.style.zIndex = '0'
+})
+
+document.querySelectorAll('.main-table-row').forEach(element => {
+  element.addEventListener('dblclick', () => {
+    const back = document.createElement('div')
+    back.classList.add('modal-backdrop')
+    back.classList.add('fade')
+    back.classList.add('show')
+    const modal = document.getElementById('cardModal')
+    modal.querySelector('.close-cart-item-modal').addEventListener('click', () => {
+      modal.classList.remove('show')
+      modal.style.display = 'none'
+      modal.style.zIndex = '0'
+      document.querySelector('.modal-backdrop').remove()
+      body.classList.remove('modal-open')
+      body.style.overflow = 'visible'
+      body.style.paddingRight = '0px'
+    })
+    modal.classList.add('show')
+    modal.style.display = 'block'
+    modal.style.zIndex = '1051'
+    body.appendChild(back)
+  })
+});
+
+document.querySelectorAll('.open-current-cart-modal').forEach(element => {
+  element.addEventListener('click', () => {
+    const modal = document.getElementById('cardItemModal')
+    modal.querySelector('.close-cart-item-modal').addEventListener('click', () => {
+      modal.classList.remove('show')
+      modal.style.display = 'none'
+      modal.style.zIndex = '0'
+    })
+    modal.classList.add('show')
+    modal.style.display = 'block'
+    modal.style.zIndex = '1052'
+
+    initTabs()
+  })
+});
