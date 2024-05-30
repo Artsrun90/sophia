@@ -1,6 +1,9 @@
-const tooltipTrigerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-tooltipTrigerList.map(function (tooltipTriggerEl) {
-  return new bootstrap.Tooltip(tooltipTriggerEl)
+let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl, {
+        container: 'body',
+        trigger : 'hover'
+    });
 })
 document.querySelector(".burger-menu").addEventListener("click", (e) => {
   e.target.classList.toggle("open");

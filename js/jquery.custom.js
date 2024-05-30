@@ -1,6 +1,3 @@
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-
 $(document).ready(function () {
 
   const treevew1Id = '#tree-view-1';
